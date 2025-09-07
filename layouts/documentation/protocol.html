@@ -1,0 +1,48 @@
+{{- define "main" -}}
+
+{{- $protocols := site.Data.protocol.protocols -}}
+
+<div class="page-docs-protocol">
+  {{ with .Params.top_image }}
+  <div class="top-image">
+    <img src="{{ . | relURL }}">
+  </div>
+  {{ end }}
+  <div class="pro-content-wrap">
+    <div class="container ">
+
+      <div class="intro-text">Here are our protocols:<br>
+        This section shows details of the experiments that are not shown in detail in the notebook.<br>
+        (Click the block to view the hidden content)
+      </div>
+
+      <div class="protocol-list-wrap">
+        {{range $index, $item := $protocols}}
+        <div class="pro-item">
+          <div class="pro-item-title">{{$item.title  | markdownify | emojify }}</div>
+          <div class="pro-item-content-wrap">
+            <div class="pro-item-content-text ">{{$item.content  | markdownify | emojify }}</div>
+          </div>
+
+        </div>
+        {{end}}
+      </div>
+
+
+    </div>
+  </div>
+
+  <script>
+    // On page load, check for search query in URL.
+    document.addEventListener('DOMContentLoaded', () => {
+      $('.protocol-list-wrap .pro-item .pro-item-title').click(function() {
+        $(this).parent().find('.pro-item-content-wrap').slideToggle('slow', function() {
+          // Animation complete.
+        });
+      });
+    });
+  </script>
+
+</div>
+
+{{- end -}}

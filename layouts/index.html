@@ -1,0 +1,52 @@
+{{- define "main" -}}
+
+
+
+  <div class="img_100">
+    <img src="{{ .Params.top_image | relURL }}">
+  </div>
+
+
+  <section class="index-bg">
+    <div class="container">
+
+      <div class="row content-row">
+        <div class="col-12 col-md-6">
+          <div class="home-video v1">
+            <video class="video" controls="" src="{{ .Params.video1 | relURL }}"></video>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class=" common-block-content">{{ .Params.content1 | markdownify | emojify }}</div>
+        </div>
+      </div>
+
+
+
+      <div class="row content-row">
+
+        <div class="col-12 col-md-6">
+          <div class=" common-block-content">{{ .Params.content2 | markdownify | emojify }}</div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="home-video v1">
+            <video class="video" controls="" src="{{ .Params.video2 | relURL }}"></video>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row content-row section-contact">
+        <div class=" common-block-content" style="    text-indent: unset;">{{ .Params.contact_info | markdownify | emojify }}</div>
+      </div>
+
+
+
+
+    </div>
+  </section>
+
+
+
+
+{{- end -}}

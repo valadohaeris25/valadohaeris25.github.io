@@ -1,0 +1,64 @@
+{{- define "main" -}}
+
+{{/* Author profile page. */}}
+
+
+{{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
+{{ $src := "" }}
+{{ if $avatar }}
+  {{ $src = $avatar.RelPermalink }}
+{{ end }}
+
+
+{{ $person :=  .Params }}
+
+
+
+
+
+<section class="author-detail-page mt-3 pt-5">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-5 col-12 about-entity">
+
+        <div class="" >
+          <img src="{{$src}}" class="about-image  avatar-circle " />
+        </div>
+
+        <div class="portrait-title">
+          <div class="common-page-h1-title"> {{.Title}} </div>
+          {{ with $person.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
+        </div>
+
+        <ul class="about-links" >
+        {{ range $person.social_links }}
+          {{ $link := .url }}
+          {{ $scheme := (urls.Parse $link).Scheme }}
+          {{ $target := "" }}
+          {{ if not $scheme }}
+          {{ $link = .link | relLangURL }}
+          {{ else if in (slice "http" "https") $scheme }}
+          {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+          {{ end }}
+          {{- if .url -}}
+            <li>
+              <a href="{{ $link | safeURL }}"  class="about-link"   {{ $target | safeHTMLAttr }} >
+                <i class="{{.icon}}"> </i> <span class="about-link-text"> {{.name}}</span>
+              </a>
+            </li>
+          {{- end -}}
+        {{ end }}
+        </ul>
+
+      </div>
+      <div class="col-md-7 col-12 about-contents">{{.Content}}</div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+{{- end -}}

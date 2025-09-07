@@ -1,0 +1,29 @@
+{{ $ := .root }}
+{{ $page := .page }}
+
+
+
+{{$leader_page_link := "authors/daweizhang" |  relURL }}
+
+<div class="home-section-about-lab">
+
+  <div class="row  ">
+    <div class="col-12 col-md-7 lab-left">
+      <p class="lab-title">{{ $page.Params.lab_intro_title | markdownify | emojify }}</p>
+      <div class="lab-intro">{{ $page.Params.lab_intro | markdownify | emojify }}</div>
+      <div class="read-more-btn-wrap">
+        <a class="btn-action-primary btn-action btn btn-success btn-lg" href="{{$leader_page_link}}"  >
+          Learn more
+        </a>
+      </div>
+    </div>
+    <div class="col-12 col-md-5 lab-right">
+
+      <a href="{{$leader_page_link}}" class="">
+        <img src="{{$page.Params.lab_intro_image | relURL }}"  class="img-fluid" />
+      </a>
+    </div>
+
+  </div>
+</div>
+

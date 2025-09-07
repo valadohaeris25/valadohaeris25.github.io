@@ -1,0 +1,26 @@
+{{- define "main" -}}
+
+{{$ := .}}
+{{$blocks := .Params.blocks }}
+
+
+<div class="page-team-community">
+  {{ with .Params.top_image }}
+  <div class="top-image">
+    <img src="{{ . | relURL }}">
+  </div>
+  {{ end }}
+  <div class="container">
+
+
+    <div class="block-content-wrap">
+    {{ range  $index, $item := $blocks }}
+      {{ partial "functions/render_view" (dict     "page" $    "item" $item        "view" "team_community_block"     "index" $index) }}
+    {{ end }}
+    </div>
+
+
+  </div>
+</div>
+
+{{- end -}}

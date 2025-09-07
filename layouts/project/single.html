@@ -1,0 +1,21 @@
+{{- define "main" -}}
+
+{{ $page := . }}
+{{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
+{{ $title := .Title }}
+
+
+<div class="top-image">
+  <img src="{{ .Params.top_image | relURL }}">
+</div>
+
+
+<section class="index-bg">
+  <div class="container">
+
+      {{.Content}}
+
+  </div>
+</section>
+
+{{- end -}}

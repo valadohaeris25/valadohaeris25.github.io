@@ -1,0 +1,61 @@
+{{ $ := .root }}
+{{ $page := .page }}
+{{ $columns := $page.Params.design.columns | default "2" }}
+
+
+
+
+
+<div class="home-our-work-wrap col-12 {{if eq $columns "2"}}col-lg-8{{end}}   {{ $page.Params.design.list_css_class }}  ">
+
+
+
+
+  <div class=" row ">
+  {{ range $index, $item := $page.Params.featured_publications }}
+  {{- $pub_section_items := where (index site.Data.publications.publications  $item.section) "id" $item.id -}}
+  {{- $picked_item :=  index $pub_section_items 0 -}}
+
+  {{- $link :=  $picked_item.link -}}
+  {{- $src :=  $item.image | relURL -}}
+  {{- $title :=  $picked_item.title | markdownify | emojify -}}
+  {{- $journal :=  $picked_item.journal | markdownify | emojify -}}
+  {{- $pub_date :=  $item.publish_date | time.Format "Jan 01, 2006"  -}}
+
+    <div class="col-12 col-md-4 ">
+      <a  href="{{ $link }}" class="member-a-link quarto-grid-item">
+        <div class=" card h-100 card-center" >
+
+          {{ if $src }}
+          <div class=" card-img-top" style="height: 200px;">
+            <img  src="{{ $src }}" class="  card-img"  />
+          </div>
+          {{ end }}
+
+          <div class="card-body post-contents">
+            <div class="no-anchor card-title listing-title">
+              {{ $title }}
+            </div>
+            <div class="card-subtitle listing-subtitle">
+              {{ $journal }}
+            </div>
+            <div class="  date-wrap  ">
+              <div class="published-date">{{ $pub_date }}</div>
+            </div>
+          </div>
+
+        </div>
+      </a>
+    </div>
+
+  {{end}}
+
+  </div>
+</div>
+
+
+<div class="read-more-btn-wrap">
+  <a class="btn-action-primary btn-action btn btn-success btn-lg" href="{{"publications" | relURL }}"  >
+  Read more
+  </a>
+</div>

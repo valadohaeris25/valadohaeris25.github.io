@@ -1,0 +1,56 @@
+{{- define "main" -}}
+
+{{$leaders := site.Data.members.leader}}
+{{$members := site.Data.members.member}}
+
+
+<div class="page-team-members">
+  {{ with .Params.top_image }}
+  <div class="top-image">
+    <img src="{{ . | relURL }}">
+  </div>
+  {{ end }}
+  <div class="container">
+
+
+
+    <div class="group-image">
+      <img src='{{ "images/member/g-leader.png" | relURL }}'/>
+    </div>
+
+    <div class="row members-image-wrap">
+      {{range $index, $item := $leaders}}
+      <div class="col-12 col-md-4 member-image-item ">
+        <div class="img-show ">
+          <img src="{{ $item.image | relURL }}"   />
+        </div>
+        <div class="img-desc-show ">
+          <div class="member-name">{{$item.name | markdownify | emojify }}</div>
+          <div class="member-desc">{{$item.desc | markdownify | emojify }}</div>
+        </div>
+      </div>
+      {{end}}
+    </div>
+
+    <div class="group-image">
+      <img src='{{ "images/member/g-research.png" | relURL }}'/>
+    </div>
+
+    <div class="row members-image-wrap">
+      {{range $index, $item := $members}}
+      <div class="col-12 col-md-4 member-image-item ">
+        <div class="img-show ">
+          <img src="{{ $item.image | relURL }}"   />
+        </div>
+        <div class="img-desc-show ">
+          <div class="member-name">{{$item.name | markdownify | emojify }}</div>
+          <div class="member-desc">{{$item.desc | markdownify | emojify }}</div>
+        </div>
+      </div>
+      {{end}}
+    </div>
+
+  </div>
+</div>
+
+{{- end -}}

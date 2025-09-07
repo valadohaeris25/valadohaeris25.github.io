@@ -1,0 +1,89 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+main:
+  - name: Home
+    url: '#about'
+    weight: 10
+
+
+
+# Project menu:
+
+  - name: Project
+    url: ''
+    weight: 20
+
+  - name: Background
+    parent: Project
+    url: 'project/background'
+    weight: 10
+
+
+  - name: Design
+    parent: Project
+    url: 'project/design'
+    weight: 20
+
+
+  - name: Result
+    parent: Project
+    url: 'project/result'
+    weight: 30
+
+
+  - name: Report
+    parent: Project
+    url: 'project/report'
+    weight: 40
+
+
+  - name: Supplementary information
+    parent: Project
+    url: 'project/supplementary_information'
+    weight: 50
+
+
+
+  # Team menu:
+
+  - name: Team
+    url: ''
+    weight: 30
+
+  - name: Member
+    parent: Team
+    url: 'team/member'
+    weight: 10
+
+  - name: Community contribution
+    parent: Team
+    url: 'team/community_contribution'
+    weight: 20
+
+
+
+
+
+  - name: Documentation
+    url: ''
+    weight: 40
+
+  - name: NoteBook
+    parent: Documentation
+    url: 'documentation/notebook'
+    weight: 10
+
+  - name: Protocol
+    parent: Documentation
+    url: 'documentation/protocol'
+    weight: 20
+
+
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
+#  - name: Curriculum Vitae
+#    url: uploads/leonelli_mauro.pdf
+#    weight: 50

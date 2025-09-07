@@ -1,0 +1,186 @@
+{{- define "main" -}}
+
+
+<div class="page-docs-notebook">
+  {{ with .Params.top_image }}
+  <div class="top-image">
+    <img src="{{ . | relURL }}">
+  </div>
+  {{ end }}
+  <div class="container">
+
+
+    <div class="vue-content notebook-wrap">
+
+
+      <script src="https://cdn.jsdmirror.com/npm/lodash@4.17.21/lodash.min.js"></script>
+      <script src="https://cdn.jsdmirror.com/npm/vue@3.5.18/dist/vue.global.prod.js"></script>
+      <div id="app_publications">
+        <div class="row">
+
+          <div class="col-12 col-md-4 months-and-parts">
+
+            <div class="months-sep-wrap">
+              <ul class=" months-list">
+                <li  class="   month-item "
+                     :class="{ 'active': item.id === reactiveData.currentMonthItem.id }"
+                     @click="reactiveData.currentMonthItem=item"
+                     v-for="(item, index) in reactiveData.monthsData">
+                  <div class="   img_box   " >
+                    <img :src="item.image"  class="month-image"  />
+                  </div>
+                </li>
+              </ul>
+              <div class="sep2"><img src='{{"images/docs/sep2.png" | relURL }}'/></div>
+            </div>
+
+            <ul class="  month-parts" v-if="reactiveData.currentMonthItem.contents.length > 0">
+              <li class="part-item" v-for="(item, index) in reactiveData.currentMonthItem.contents"
+                  @click.prevent="showNoteContent(item, index)"
+              >
+                <a class="month-part-item" href="#" >
+                  Part ${index + 1}
+                </a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-8">
+            <div class="note-content-wrap"
+                 :class="{ 'empty-init': staticDataMap.initContent === reactiveData.boardContent.content }"
+              >
+              <div class="month-title">${selectedMonthPart}</div>
+              <div class="note-content" v-html="reactiveData.boardContent.content"></div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+
+      <script>
+        //  → https://example.org/docs/
+        const baseUrl = '{{ site.BaseURL }}';
+
+        const staticDataMap = {
+          initContent: 'CLICK ON THE RED TAB TO VIEW THE INDIVIDUAL LAB RECORDS',
+        };
+        const monthsMap = {
+          1: 'Jan',
+          2: 'Feb',
+          3: 'Mar',
+          4: 'Apr',
+          5: 'May',
+          6: 'Jun',
+          7: 'Jly',
+          8: 'Aug',
+          9: 'Sep',
+          10: 'Oct',
+          11: 'Nov',
+          12: 'Dec',
+        }
+      </script>
+
+      <script>
+
+
+        const { createApp, reactive, ref, onMounted, nextTick, computed  } = window.Vue;
+
+        function loadNotebookData() {
+          return new Promise((resolve, reject) => {
+            // resolve();
+            // reject();
+            return fetch('{{ "documentation/notebook/data/index.json" | relLangURL }}')
+              .then(response => {
+                //console.log(response); // 处理你的JSON数据
+                return response.json()
+                // return response.text()
+              })
+              .then(data => {
+                // console.log(data);
+                // const data2 = JSON.parse(data) || []
+                const data2 = data  || []
+                console.log(data2); // 处理你的JSON数据
+                resolve(data2)
+              });
+          });
+        }
+
+
+        function setup() {
+          const reactiveData = reactive({
+            // showContent: staticDataMap.initContent,
+            boardContent: {partIndex: '', monthId: '', content: staticDataMap.initContent},
+            currentMonthItem: {id: '', contents: []},
+            currentMonthPart: '',
+            monthsData: [],
+          });
+
+
+
+          onMounted(() => {
+          });
+
+          // 根据所选的part来变化
+          const selectedMonthPart = computed(() => {
+            let monthPart = '';
+            if(reactiveData.boardContent.partIndex !== '') {
+              let part = reactiveData.boardContent.partIndex + 1;
+              part = `Part ${part}`
+
+              const monthName = monthsMap[reactiveData.boardContent.monthId] + '.';
+              monthPart = `${monthName} ${part}`;
+            }
+
+            // console.log(part, reactiveData.currentMonthPart)
+            return monthPart;
+          });
+
+
+          loadNotebookData().then(data => {
+            // data.map(item => {
+            //   item.image = `${baseUrl}${item.image}`
+            // });
+            reactiveData.monthsData = data;
+
+          });
+
+          function showNoteContent(partItem, partIndex) {
+            // reactiveData.showContent = _.get(monthItem, `contents[${partIndex}].content`, '');
+            // reactiveData.showContent = partItem.content;
+            reactiveData.currentMonthPart = partIndex;
+
+            Object.assign(reactiveData.boardContent, {
+              partIndex: partIndex,
+              monthId: reactiveData.currentMonthItem.id,
+              content: partItem.content
+            });
+          }
+
+
+
+          return {
+            reactiveData,
+            monthsMap,
+            staticDataMap,
+            selectedMonthPart,
+            showNoteContent,
+          };
+        }
+
+        createApp({
+          delimiters: ['${', '}'],
+          setup,
+        }).mount("#app_publications");
+
+      </script>
+
+    </div>
+
+
+
+  </div>
+</div>
+
+{{- end -}}

@@ -1,0 +1,33 @@
+{{- $notebook_data := site.Data.notebook.months -}}
+
+{{- $dataList := slice -}}
+
+{{- range $index, $item := $notebook_data -}}
+  {{- $dict1 := dict
+      "id" $item.id
+      "image" (  (printf "images/docs/%s" $item.image) | relURL )
+  -}}
+
+  {{- if ( gt (len $item.contents) 0) -}}
+    {{- $contentList := slice -}}
+    {{- range $index2, $item2 := $item.contents -}}
+      {{- $item2 = merge $item2 (dict
+          "content"  ($item2.content | markdownify)
+      ) -}}
+      {{- $contentList = $contentList | append  $item2 -}}
+    {{- end -}}
+
+    {{- $dict1 = merge $dict1 (dict
+              "contents" $contentList
+    ) -}}
+  {{- end -}}
+
+    {{- $dataList = $dataList | append  $dict1 -}}
+
+{{- end -}}
+
+
+
+{{- $dataList = sort $dataList "id" "asc" -}}
+
+{{ $dataList | jsonify }}

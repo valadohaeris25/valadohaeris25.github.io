@@ -1,0 +1,31 @@
+{{- define "main" -}}
+
+{{ $page := . }}
+{{ $featured := (.Resources.ByType "image").GetMatch "*featured*" }}
+{{ $title := .Title }}
+
+<div class="project-page-wrap">
+  <div class="top-image">
+    <img src="{{ .Params.top_image | relURL }}">
+  </div>
+
+
+  <div class="main-bg"
+       {{with .Params.bg_image }}style="background-image: url('{{ . | relURL}}')"{{end}}
+  >
+    <div class="container">
+
+      {{ with .Params.content_image }}
+      <div class="content-image">
+        <img src='{{ . | relURL }}'/>
+      </div>
+      {{ end}}
+
+      <div class="common-text-content-wrap">
+        {{.Content}}
+      </div>
+
+    </div>
+  </div>
+</div>
+{{- end -}}
