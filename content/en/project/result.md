@@ -17,7 +17,7 @@ layout: background
 3.  Broad-Spectrum Cancer Immunotherapy: This study introduces a new strategy for NK cell-based therapy, utilizing an NKR library as a sensor to achieve targeted and efficient destruction of tumor cells across various malignancies.
 
 
-{{< image src="images/project/result/r2.png" >}}
+{{< image src="images/project/result/r2.png" style="height: 500px;" >}}
 
 ## Developing CAR Constructs for Tumor Antigen-Dependent Proliferation via Directed Evolution
 

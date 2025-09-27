@@ -26,6 +26,20 @@
       </div>
 
     </div>
+
+    {{/*
+    <div class=" main-bg bottom-img-wrap "
+         {{with .Params.bottom_image }}style="background-image: url('{{ . | relURL}}')"{{end}}
+    > </div>
+    */}}
+
+    <div class="bottom-img-wrap " >
+      {{with .Params.bottom_image }}
+          <img src="{{ . | relURL}}" />
+      {{end}}
+    </div>
+
+
   </div>
 </div>
 {{- end -}}

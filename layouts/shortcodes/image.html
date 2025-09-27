@@ -5,6 +5,6 @@
 {{ $style:= .Get "style" }}
 
 
-<div class="short-code-image {{$class}} "  style="{{$style | safeCSS }}">
-  <img  src="{{ relURL $src }}" />
+<div class="short-code-image {{$class}} " >
+  <img  src="{{ relURL $src }}"  style="{{ $style | safeCSS }}" />
 </div>

@@ -2,7 +2,12 @@
 title: ""
 the_page_id: project_background
 top_image: "images/design/p-b.png" 
+ 
 #bg_image: "images/design/project-background.png"
+
+bottom_image: "images/project/background/bottom.png"
+
+
 
 layout: background
 
@@ -48,8 +53,6 @@ Adoptive cell therapy (ACT) has revolutionized clinical treatment strategies; ho
 
 Interleukin-2 (IL-2) initiates downstream signaling by binding to the IL-2 receptor (IL-2R), which requires oligomerization of the β chain (IL-2Rβ) and γ chain (IL-2Rγ) to form a stable receptor complex. This oligomerization is critical for the recruitment and activation of intracellular signaling molecules. Upon complex formation, JAK1 and JAK3 are phosphorylated, thereby activating the JAK-STAT pathway, in which phosphorylated STAT5 dimerizes and translocates to the nucleus to regulate transcriptional programs that promote cell proliferation, survival and effector molecule production. Concurrently, the PI3K-AKT pathway is engaged through PI3K recruitment, leading to PIP3 generation and AKT activation, which enhances cell survival, metabolism, and anti-apoptotic signaling.
 
-
-{{< image src="images/project/background/bottom.png" style="padding: 5rem 0;"  >}}
 
 
 
