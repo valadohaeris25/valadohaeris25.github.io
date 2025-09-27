@@ -2,8 +2,9 @@
 
 {{ $class:= .Get "class" }}
 {{ $src:= .Get "src" }}
+{{ $style:= .Get "style" }}
 
 
-<div class="short-code-image {{$class}}">
+<div class="short-code-image {{$class}} "  style="{{$style | safeCSS }}">
   <img  src="{{ relURL $src }}" />
 </div>

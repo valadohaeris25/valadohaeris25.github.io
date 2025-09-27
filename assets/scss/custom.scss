@@ -1,6 +1,7 @@
 // Override this file to add your own SCSS styling.
 
-$navbar-bg-color: #23232d;
+//$navbar-bg-color: #23232d;
+$navbar-bg-color: rgb(69, 70, 94);
 $navbar-height: 120px;
 $text-primary-color: #212121;
 
@@ -59,13 +60,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 }
 #navbar-main .main-menu-item ul li .nav-link {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-top: 1rem;
-  //color: #ffffffb3;
+  color: rgba(255,255,255,0.9);
 }
 .navbar-brand {
   img {
-    max-height: 3rem;
+    max-height: 5rem;
   }
 }
 
@@ -481,8 +482,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   transition: all 0.3s;
   opacity: 1;
   img {
-    width: 4rem;
-    border: 1px solid lightgrey;
+    width: 8rem;
+    border: 0px solid lightgrey;
   }
 }
 .page-footer {
@@ -495,7 +496,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 // 手机
 @media (max-width: 780px) {
   .navbar-brand img {
-    max-height: 2.2rem;
+    max-height: 4.5rem;
   }
 
   .navbar-collapse {
