@@ -1,31 +1,31 @@
 leader:
   - name: "Yaqi Gao"
-    image: "images/member/member.jpg"
+    image: "images/member/txd.jpg"
     desc: "Undergraduate student, Naval Medical University. She fearlessly tackles research challenges and innovative experiments. This time, she's not just competing but claiming the championship trophy."
 
 member:
   - name: "Hanyue Liu"
-    image: "images/member/member.jpg"
+    image: "images/member/lyr.jpg"
     desc: "Undergraduate student, Naval Medical University. Unshakable confidence and sheer charisma make her effortlessly claim victory in every competition!"
 
   - name: "Xiaoyuan Chen"
-    image: "images/member/member.jpg"
+    image: "images/member/yzy.jpg"
     desc: "Undergraduate student, Naval Medical University. She keeps a single spark to a prairie fire in synthetic biology."
 
   - name: "Xinyu Zhu"
-    image: "images/member/member.jpg"
+    image: "images/member/sm.jpg"
     desc: "Undergraduate student, Naval Medical University. Fueled by passion and confidence, she excels in medical research and teamwork. With humor and charm, she's here to dominate the competition!"
 
   - name: "Xudong Tang"
-    image: "images/member/member.jpg"
+    image: "images/member/zxx.jpg"
     desc: "Undergraduate student, Naval Medical University. Maybe an ordinary player in life science? But wanna be undoubtedly the specialist in synthetic biology."
 
   - name: "Yinran Luo"
-    image: "images/member/member.jpg"
+    image: "images/member/jqw.jpg"
     desc: "Undergraduate student, Naval Medical University. She is a diamond in the rough, a shiny piece of coal, trying to reach her goal."
 
   - name: "Song Zhang"
-    image: "images/member/member.jpg"
+    image: "images/member/jy.jpg"
     desc: "Doctoral student, Naval Medical University. There are no funds he can't raise since he published eight articles with a total IF of 70, yet he hasn't graduated yet."
 
 
