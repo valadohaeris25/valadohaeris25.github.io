@@ -19,7 +19,7 @@ layout: background
 
 {{< image src="images/project/background/b1-1.png" style="padding: 0rem 0;"  >}}
 
-{{< image src="images/project/background/b1.png" style="padding: 5rem 0;"  >}}
+{{< image src="images/project/background/b1.png" style="padding: 0rem 0;"  >}}
 
 De novo protein design refers to the from-scratch computational generation of protein sequences and structures without relying on naturally occurring templates. It leverages physics-based modeling, energy minimization, and increasingly deep learning algorithms to predict stable folds and desired functions. Representative methods include Rosetta de novo modeling, AlphaFold/AlphaFold3 for structure prediction, and generative models such as ProteinMPNN, RFdiffusion, and EvoDiff. In our project, we designed two distinct libraries of 100 sequences each targeting IL-2Rβ and IL-2Rγ via RFdiffusion. Following the initial HDOCK screening to exclude sequences with high affinity for IL-2Rα, we combinatorially assembled the selected β and γ peptides and then proceeded with structural prediction via AlphaFold3 and experimental validation.
 
