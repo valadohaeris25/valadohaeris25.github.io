@@ -17,6 +17,7 @@ layout: background
 
 ---
 
+{{< image src="images/project/background/b1-1.png" style="padding: 0rem 0;"  >}}
 
 {{< image src="images/project/background/b1.png" style="padding: 5rem 0;"  >}}
 
