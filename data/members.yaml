@@ -1,33 +1,46 @@
 leader:
-  - name: "Yaqi Gao"
+  - name: "Xudong Tang"
     image: "images/member/txd.jpg"
-    desc: "Undergraduate student, Naval Medical University. She fearlessly tackles research challenges and innovative experiments. This time, she's not just competing but claiming the championship trophy."
+    desc: "Undergraduate student, Naval Medical University. The competition doesn't stand a chance. I'm here to collect my trophy."
 
 member:
-  - name: "Hanyue Liu"
+  - name: "Yinran Luo"
     image: "images/member/lyr.jpg"
-    desc: "Undergraduate student, Naval Medical University. Unshakable confidence and sheer charisma make her effortlessly claim victory in every competition!"
+    desc: "Undergraduate student, Naval Medical University. She is a diamond in the rough, a shiny piece of coal, trying to reach her goal."
 
-  - name: "Xiaoyuan Chen"
+  - name: "Ziyan Yu"
     image: "images/member/yzy.jpg"
-    desc: "Undergraduate student, Naval Medical University. She keeps a single spark to a prairie fire in synthetic biology."
+    desc: "Undergraduate, Naval Medical University. With feet firmly on the ground, she works perseveringly towards her goals."
 
-  - name: "Xinyu Zhu"
+  - name: "Meng Sun"
     image: "images/member/sm.jpg"
-    desc: "Undergraduate student, Naval Medical University. Fueled by passion and confidence, she excels in medical research and teamwork. With humor and charm, she's here to dominate the competition!"
+    desc: "Undergraduate student, Naval Medical University, Guided by 'Whatever you do, do it a hundred percent', she strives for excellence in every task!"
 
-  - name: "Xudong Tang"
+  - name: "Xinxin Zhang"
     image: "images/member/zxx.jpg"
     desc: "Undergraduate student, Naval Medical University. Maybe an ordinary player in life science? But wanna be undoubtedly the specialist in synthetic biology."
 
-  - name: "Yinran Luo"
+  - name: "Qiwen Jiang"
     image: "images/member/jqw.jpg"
     desc: "Undergraduate student, Naval Medical University. She is a diamond in the rough, a shiny piece of coal, trying to reach her goal."
 
-  - name: "Song Zhang"
+  - name: "Yang Jin"
     image: "images/member/jy.jpg"
-    desc: "Doctoral student, Naval Medical University. There are no funds he can't raise since he published eight articles with a total IF of 70, yet he hasn't graduated yet."
+    desc: "undergraduate student at Naval Medical University. Her steady composure and sharp foresight allow her to support the room and deliver solutions."
 
+ - name: "Xuantong Liu"
+    image: "images/member/lxt.jpg"
+    desc: "undergraduate student at Naval Medical University. Her steady composure and sharp foresight allow her to support the room and deliver solutions."
 
+ - name: "Fan Yang"
+    image: "images/member/yf.jpg"
+    desc: "undergraduate student at Naval Medical University. Her steady composure and sharp foresight allow her to support the room and deliver solutions."
 
+ - name: "Binxuan Zhang"
+    image: "images/member/zbx.jpg"
+    desc: "undergraduate student at Naval Medical University. Her steady composure and sharp foresight allow her to support the room and deliver solutions."
+
+- name: "Kaiqing Zhang"
+    image: "images/member/zkq.jpg"
+    desc: "undergraduate student at Naval Medical University. Her steady composure and sharp foresight allow her to support the room and deliver solutions."
 
