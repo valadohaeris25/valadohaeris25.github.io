@@ -105,11 +105,26 @@ protocols:
     content: |
       ### Principle
 
-      The lentiviral vector packaging system consists of two main components: the packaging component and the vector component. The packaging component is created by removing cis-acting sequences necessary for HIV-1 genome packaging, reverse transcription, and integration, allowing it to provide essential proteins for viral particle production. In contrast, the vector component contains these required cis-acting sequences along with a polyclonal site regulated by a heterologous promoter where a target gene can be inserted. By co-transfecting packaging cells with multiple plasmids of the vector components, replication-defective lentiviral particles carrying target genes can be produced.
+      ClonExpress technology is a simple, fast and efficient technique for seamless DNA cloning, allowing targeted cloning of insert fragments into any site of any vector. The vector is linearized by introducing the terminal sequence of the linearized vector at the 5' end of the forward/reverse PCR primer of the insert, so that the 5' and 3' ends of the PCR product have the same sequence (15 - 20 bp) as the two ends of the linearized vector, respectively. After the PCR product and linearized vector were mixed in a certain proportion, the reaction can be carried out at 37℃ for 30 min under the catalysis of recombinase to complete the targeted cloning.
 
         {{< image src="images/docs/protocol/p2.png" >}}
 
+      **A. Vector linearization:**  The linearized vector was obtained via restriction enzyme digestion or inverse PCR.
+      **B. Insert fragment acquisition:** Homologous sequences corresponding to the 15-20 bp terminal regions of the linearized vector were added to the 5' ends of the gene-specific forward/reverse amplification primers. The insert fragment containing homologous arms was amplified using these primers.
+      **C. Recombination reaction: ** The linearized vector and insert fragment were mixed at an optimal ratio, followed by a 5-30 minutes recombination reaction catalyzed by Exnase (2×CE Mix) at 50°C to achieve in vitro circularization of the multiple linear DNA fragments.
+      **D. Transformation of competent cells:** The recombinant products were directly transformed into competent cells, yielding hundreds of single colonies on agar plates for subsequent positive screening.
+
       ### Method
+      ** A.	Preparation of Linearized Vector**
+      1.  Suitable cloning sites are chosen for vector linearization. Sites lacking repetitive sequences and exhibiting GC content between 40% and 60% within the 20 bp regions upstream and downstream of the cloning site are preferentially selected.
+      2.	The vector can be linearized via restriction enzyme digestion or inverse PCR amplification.
+      **B.	Acquisition of Insert Fragment**
+      1.	**General primer design principles:** Homologous sequences corresponding to the termini of the linearized vector are introduced at the 5’-ends of the forward and reverse amplification primers for the insert fragment. This ensures that the amplified insert fragment contains terminal homologous sequences at its 5’ and 3’ ends that match the corresponding sequences of the linearized vector.
+      Forward primer design: 5’–[Homologous sequence from upstream vector terminus] + [Restriction site (retained or removed)] + [Gene-specific forward primer sequence]–3’.
+      Reverse primer design: 5’–[Homologous sequence from downstream vector terminus] + [Restriction site (retained or removed)] + [Gene-specific reverse primer sequence]–3’.
+      2.	**PCR amplification of insert fragment:** The insert fragment is amplified using any PCR polymerase, with no requirement to consider the presence or absence of A-overhangs at the product termini. 
+      
+
 
       1. Cell Preparation: Seed HEK293T cells in a 10 cm dish at a density of 3-4 × 106 cells per dish in DMEM supplemented with 10% FBS and 1% Pen-Strep. Incubate the cells at 37 °C in a 5% CO₂ atmosphere until they reach 70-80% confluence (approximately 24 hours).
 
