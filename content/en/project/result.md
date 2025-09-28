@@ -19,7 +19,7 @@ layout: background
 
 {{< image src="images/project/result/r2.png" style="height: 500px;" >}}
 
-## 1.	Developing peptide for selectively binding of IL-2Rβ and IL-2Rγ via de novo design
+# 1.	Developing peptide for selectively binding of IL-2Rβ and IL-2Rγ via de novo design
 
 Based on the natural binding sites between IL-2 and IL-2Rβ and γ (Fig. 1a), we employed RFdiffusion to perform de novo design, generating 100 mimics with high affinity for IL-2Rβ or γ but low affinity for IL-2Rα respectively, each with a length ranging from 46-65 amino acids (Fig. 1b and Extended Data Table 1 and 2). Selection was based on the principle that lower docking scores indicate higher binding affinity. To avoid high affinity for IL-2Rα, sequences exhibiting docking scores below -218 with IL-2Rβ, yet above -215 with IL-2Rα, including B0, B34, and B51 were selected (Extended Data Table 3). Meanwhile, sequences with scores lower than -240 against IL-2Rγ but higher than -245 against IL-2Rα, namely G9, G16, G26, G32, G35, G42, G57, G63, G71, G88, and G90, were included (Extended Data Table 4).
 
@@ -31,7 +31,7 @@ Through visual inspection with PyMOL to obtain the tightly packed helical bundle
 
  
 
-## 2.	Screening and affinity evaluation of IL-2Rβγ agonists
+# 2.	Screening and affinity evaluation of IL-2Rβγ agonists
 
 G9, G16, G35, G42, G57, and G71, together with their reverse counterparts, were conjugated via a flexible linker and fused with a glycosylphosphatidylinositol (GPI) anchor to retain IL-2 mimics on the cell surface, while incorporation of a Flag tag enabled subsequent detection and isolation, collectively facilitating NK cell activation (Fig. 2a) Lentiviral transduction of NK-92 cells generated a library of 36 variants, each expressing a distinct IL-2 mimic. To identify the specific sequences that promote NK cell proliferation, the library was seeded into 96-well plates at one cell per well and cultured under cytokine-free conditions. Expanded clones were subsequently harvested and subjected to sequencing (Fig. 2a), which revealed significant enrichment of B34G35R, B51G35R, and B51G9 compared with other constructs (Fig. 2b).
 
@@ -43,7 +43,7 @@ To define the protein-protein interfaces for residue-wise flexibility (B-factor)
 
 
 
-##  3.	Selective IL-2Rβγ agonists modulate functions of effector cells
+#  3.	Selective IL-2Rβγ agonists modulate functions of effector cells
 
 After confirming their binding affinity to IL-2R, we systematically evaluated B34G35R, B51G35R, and B51G9 for their capacity to enhance NK cell proliferation, activation, and cytotoxicity, thereby identifying the most effective IL-2 mimics. Among these, B51G35R demonstrated superior potency in driving NK cell expansion compared with native IL-2 (Fig. 3a), and its advantage was further validated in YT cells (Fig. 3b). We further armed αMSLN CAR-NK and αHER2 CAR-T cells with the IL-2 mimics and measured their tumor-killing activity. The heatmap showed that cells expressing B51G35R achieved optimal killing efficacy, outperforming the other two constructs. In contrast, B51G9 only marginally enhanced cytotoxic activity (Fig. 3c).
 
@@ -58,7 +58,7 @@ Effector cell activation and effector molecule secretion were concurrently evalu
 
  
 
-##  4.	Design and affinity characterization of acid-responsive IL-2 Mimics
+#  4.	Design and affinity characterization of acid-responsive IL-2 Mimics
 
 To address the limitation that IL-2 fails to promote receptor oligomerization under acidic conditions, the linker in B34G35R, B51G35R, and B51G9 were substituted with GALA4, GALA5, or GALA6 (Fig. 4a). The GALA peptide is a synthetically designed, pH-sensitive motif that transitions from a random coil to an amphipathic α-helix as the pH decreases from 7.0 to 5.0, a property anticipated to drive receptor oligomerization specifically in acidic environments (Fig. 4b). Using AF3, we first assessed the binding interfaces between IL-2Rβγ and the GALA-modified mimics. The results demonstrated that incorporation of the GALA peptide neither compromised structural positioning nor interfered with receptor-binding interactions. Guided by AF3 predicted TM-score (ptm) and inter-residue predicted TM-score (iptm), the GALA5 variant was selected for further experimental validation (Extended Data Table 7). The resulting constructs incorporating GALA5 as a linker are hereafter referred to as B34G35R-G, B51G35R-G, and B51G9-G (Fig. 4c). Subsequent BLI assays under acidic conditions (pH 6.4, acidified with 15 mM lactate) revealed that all three mimics exhibited higher IL-2Rβγ affinity than IL-2, with B34G35R-G (52 pM) displaying substantially stronger binding than the other variants, indicating that GALA-modified IL-2 mimics possess acid-responsive binding capability (Fig. 4d).
 
@@ -71,7 +71,7 @@ To address the limitation that IL-2 fails to promote receptor oligomerization un
 
  
 
-##  5.	Impact of acid-responsive IL-2R agonists on effector cell receptor oligomerization and functional potency
+#  5.	Impact of acid-responsive IL-2R agonists on effector cell receptor oligomerization and functional potency
 
 We evaluated the efficiency of IL-2Rβ/γ oligomerization induced by GALA-linked IL-2 mimics under acidic conditions using the NanoBiT protein complementation assay where the LargeBit and SmallBit fragments were fused to IL-2Rβ and IL-2Rγ, respectively (Fig. 5a). Upon stimulation with the IL-2, B34G35R-G, B51G35R-G and B51G9-G respectively, NanoBiT complementation signals revealed pronounced co-clustering of IL-2Rβ and IL-2Rγ at the plasma membrane compared with IL-2 stimulation alone, visualized as distinct fluorescent puncta. These findings demonstrate that B34G35R-G, B51G35R-G, and B51G9-G, effectively promote IL-2R oligomerization under acidic conditions (pH=6.4) (Fig. 5b).
 
