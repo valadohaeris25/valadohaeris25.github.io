@@ -320,6 +320,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
       background-repeat: no-repeat;
     }
 
+    @for $i from 1 through 21 {
+      li.part-item:nth-child(#{$i}) {
+        background-image: url('../images/docs/p#{$i}.png');
+      }
+    }
+
+    /*
     li.part-item:nth-child(1n) {
       background-image: url(../images/docs/label1.png);
     }
@@ -365,7 +372,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     }
     li.part-item:nth-child(12n) {
       background-image: url(../images/docs/label12.png);
-    }
+    }*/
 
 
   }
@@ -395,6 +402,26 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
       font-size: 1.5rem;
       font-weight: 400;
       font-family: "ARIAL";
+      table {
+        table-layout: fixed;
+
+        border-collapse: collapse;
+        th, td {
+          padding: .75rem;
+          vertical-align: top;
+          border: 1px solid #666;
+        }
+
+        tr {
+          td:first-child {
+            width: 30%;
+          }
+        }
+        td {
+          // padding: 1rem 0;
+          word-break: break-all;
+        }
+      }
     }
   }
   .empty-init {

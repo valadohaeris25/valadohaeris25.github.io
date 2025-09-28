@@ -35,11 +35,11 @@ blocks:
     content: |
       For those developing targeted drugs for solid tumors, we described the concept and basic workflow of directed mutagenesis. Through a deep understanding of directed mutagenesis, drug developers may design and optimize drug structures more accurately. The heterogeneous tumor micro-environment restricted the efficacy of drugs in the treatment of solid tumors. Directed mutagenesis provides a way to enhance drug adaptability and efficacy, enabling flexible structural modifications.
 
-  - title: "Promoting Early Cancer Screening Awareness and Advanced CAR-NK Therapy Education"
-    title_image: "images/member/community/p51.png"
-    content_image: "images/member/community/p5.png"
-    content: |
-      During visits to university and hospital neighborhoods, we crafted educational materials based on our CAR-NK therapy research, aiming to spread knowledge on its cancer treatment applications. With the support of the residents' committees, we held lectures and Q&As, engaging audiences across ages. During these events, we elaborated on the fundamental principles and advantages of CAR-NK therapy, highlighting its promising direction for future cancer immunotherapy. This community service reinforced our commitment to advancing CAR-NK, confident it will offer hope to more cancer sufferers.
+#  - title: "Promoting Early Cancer Screening Awareness and Advanced CAR-NK Therapy Education"
+#    title_image: "images/member/community/p51.png"
+#    content_image: "images/member/community/p5.png"
+#    content: |
+#      During visits to university and hospital neighborhoods, we crafted educational materials based on our CAR-NK therapy research, aiming to spread knowledge on its cancer treatment applications. With the support of the residents' committees, we held lectures and Q&As, engaging audiences across ages. During these events, we elaborated on the fundamental principles and advantages of CAR-NK therapy, highlighting its promising direction for future cancer immunotherapy. This community service reinforced our commitment to advancing CAR-NK, confident it will offer hope to more cancer sufferers.
 
         
 

@@ -73,7 +73,7 @@ main:
     url: ''
     weight: 40
 
-  - name: NoteBook
+  - name: Notebook
     parent: Documentation
     url: 'documentation/notebook'
     weight: 10
