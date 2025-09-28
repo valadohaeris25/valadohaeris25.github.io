@@ -1,28 +1,107 @@
 protocols:
-  - title: "Plasmids Construction"
+  - title: "De novo design"
     content: |
       ### Principle
 
-      Plasmid construction is a fundamental technique in molecular biology used to create recombinant DNA molecules for various applications, including gene expression, functional studies, and protein production. The process involves inserting a gene of interest into a plasmid vector—a circular DNA molecule that replicates independently within a host cell. This is achieved through restriction enzyme digestion, which cuts both the plasmid and the gene at specific sites, and ligation, which joins them together. The newly constructed plasmid is then transformed into a host organism, such as bacteria or yeast, where it can replicate and express the inserted gene, enabling further analysis and experimentation.
+      RFDiffusion is a cutting-edge method for de novo protein structure and function design, leveraging the capabilities of deep learning and diffusion models. It is based on the RoseTTAFold (RF) structure prediction network, fine-tuned on protein structure denoising tasks. The principle behind RFDiffusion is to generate protein backbones by iteratively refining noise-corrupted structures, eventually producing functional and structurally accurate proteins from simple molecular specifications.
+
+      {{< image src="images/docs/protocol/pro/p1.png" >}}
+
+      HDOCK server is a free docking framework based on hybrid docking strategy, which automatically incorporate the binding interface information into traditional global docking, and realize the sampling and scoring of protein and protein docking with robustness and high speed. Although developers claim that HDOCK can realize the docking between protein and nucleic acid, it is still difficult because of the complexity and flexibility of nucleic acid structure. HDOCK server integrates homology search, template-based modeling, structure prediction, global docking, biological information integration and job management, and supports downloading and visual interaction, so it is friendly to non-professional biologist.
+
+      AlphaFold3 is a state-of-the-art protein structure prediction tool developed by DeepMind. It utilizes deep learning techniques to quickly and accurately predict the three-dimensional structure of proteins based on their amino acid sequences. This advanced AI system has significantly improved the speed and accuracy of protein structure predictions, making it a valuable resource for biological research, drug discovery, and understanding the functions of proteins in the body. AlphaFold3 builds upon the success of its predecessors, offering a more efficient and reliable way to predict protein structures, which can aid in the development of new therapeutics and deepen our understanding of biological systems.
+
 
       ### Method
 
-      1. The CAR sequence was synthesized by Genewiz (Suzhou, China), introducing an Xbal restriction site at the 5’ end of the sequence and a BamHI restriction site at the 3’ end of the sequence. The CARs target fragment and vector were double-digested with restriction enzymes.
+      A.	RFDiffusion
 
-      2. The reactions were maintained at 37°C hour, inactivated at 65 °C for 5 min, and then stored at 4˚C. The products were proceeded by using 1.5% agarose gel electrophoresis at 120V for 45 min and then the target bands were recovered.
+      1. Model Training
 
-      3. The linear vectors and the target segments were recycled.
+      ①	Data Preparation: Sample protein structures from the Protein Data Bank (PDB) and introduce noise to create training inputs.
 
-      4. The whole system was incubated at 16 °C for 30 min, inactivated at 65°C for 10 min, and then stored at 4 °C. The connection products were transformed into Stbl3 by T4 ligase (Rapid DNA Ligation Kit, Genstar). After selected clones were identified correctly through sequencing, we shaked the bacteria (500 mL volume) in the 2L flask and used the NucleoBond Xtra Midi Maxi EF plasmid purification kit (macherey-nagel 740420.10) to extract the plasmids.
+      ②	Noise Application: Perturb Cα coordinates with 3D Gaussian noise and apply Brownian motion to residue orientations.
 
-      {{< image src="images/docs/protocol/p1.png" >}}
+      ③	Model Training: Train the RFDiffusion model by minimizing the mean-squared error (MSE) loss between frame predictions and the true protein structure.
 
-      ##### Fig.  Schematic diagram of plasmid construction
+        2.	Protein Design
+
+      ①	Initialization: Start with random residue frames.
+
+      ②	Denoising Iterations: Iteratively refine the protein structure by denoising the noisy input, adding noise at each step to generate the input for the next iteration.
+
+      ③	Sequence Design: Use the ProteinMPNN network to design sequences encoding the generated protein structures.
+
+        3.	Conditioning for Specific Designs
+
+      ①	Unconditional Design: Generate diverse protein structures without additional input.
+
+      ②	Topology-Constrained Design: Provide secondary structure and/or fold information to guide the design towards specific topologies.
+
+      ③	Symmetric Oligomer Design: Specify point group symmetry to create symmetric oligomeric structures.
+
+        4.	Experimental Characterization
+
+      ①	Expression and Purification: Express the designed proteins in a suitable host and purify them for further analysis.
+
+      ②	Structural Verification: Use techniques such as circular dichroism (CD) and cryo-electron microscopy (cryo-EM) to verify the structure and stability of the designed proteins.
+
+      ③	Functional Validation: Assess the functionality of the designed proteins through binding assays, enzymatic activity tests, or other relevant functional assays.
+
+
+
+      B.	HDOCK
+
+      1.	Data input
+
+      The HDOCK web server is available at http://hdock.phys.hust.edu.cn/. Both sequence and structure information of ligand and receptor should be uploaded through the website separately. The docking process will be carried out in the server. Click submit to wait for the results. Generally, the waiting time is approximately 30 minutes. The submitted sequences should be in FASTA format and contain only standard amino acids. The structure should be in PDB format. In addition, residue information of the binding sitei is also possible to be submitted as a filter in the docking process.
+
+      2.	Docking preparation
+
+      First, the homologous sequences of molecules will be searched by sequence similarity search. The template with the highest sequence coverage, highest sequence similarity and highest resolution will be selected to build the template-based model. ClustalW is used for sequence alignment, and MODELLER is used for model construction. This step will be executed on the server.
+
+      3.	Global docking
+
+      HDOCKlite, a layered docking program based on FFT, is used to globally sample the presumed binding directions. If the binding site information was provided when submitting, the docking process will also include it. The ranked binding modes are clustered with an RMSD cutoff of 5 Å. if two binding modes have a ligand RMSD of ≤ 5 Å, the one with the better score is kept. This step will be executed on the server. The docking model of HDOCKlite and the template-based docking model of MODELLER will be provided for download through web interaction.
+
+      4.	Results analysis
+
+      The server will send the top 10 docking models to the website. The results page contains an interactive visualization window and a summary table. The summary table usually contains docking energy score, confidence score and ligand RMSD. If the SAXS data file is provided, the SAXS chi-square of the model can also be displayed. Results can also be downloaded as a PDB file, using the molecular visualization software PyMOL to open and view the predicted model.
+
+      C.	AlphaFold3
+
+      1.	Data Retrieval
+
+      ①	Retrieve Template Structures: The model retrieves template structures from PDBmmCIF files. This involves parsing the files to extract the relevant structural information that can serve as a template for the prediction of the target protein structure.
+
+      ②	Database Sequence Retrieval: Retrieve protein sequences from five databases to be used for multiple sequence alignment (MSA). And retrieve RNA sequences from three databases, also for MSA purposes. These sequences help in understanding the evolutionary context and the potential interactions with the protein of interest.
+
+        2.	Sequence and Token Processing
+
+      ①	Tokenization: Convert the input sequences (protein and RNA), ligands, and covalent bonds into tokens. Tokenization is the process of breaking the sequences into smaller units that can be processed by the neural network.
+
+      ②	Embedding: Input the tokens into an embedder, which is a component of the neural network designed to convert tokens into high-dimensional vectors (embeddings) that capture their meaning in the context of the model. The embedder will output three types of embeddings:
+
+      Input Embeddings: Representations of the input sequences.
+
+      Single Embeddings: Representations of individual tokens.
+
+      Pair Embeddings: Representations of pairs of tokens, which capture the relationships between different parts of the sequences.
+
+        3.	Structure Generation and Refinement
+
+      ①	Integration of Information: Combine the template structure information with the pair embeddings obtained from the feature extraction module. Integrate MSA information to generate a pair representation that captures the evolutionary and structural relationships within the sequences.
+
+      ②	Representation Regulation: Use the Pairformer module to organize and update the single representation and pair representation information. This module ensures that the relationships between different parts of the protein are accurately reflected in the model's representations. And the single and pair representations are updated iteratively through multiple cycles to refine and improve their accuracy.
+
+      ③	Structure Prediction: Pass the encoded information through a diffusion model, which progressively adds noise to the data and then denoises it to generate a clear three-dimensional structure of the protein. Then use metrics such as pLDDT (predicted local distance difference testing), PAE (predicted alignment error), and PDE (predicted distance error) to assess the confidence of the predicted structure. These metrics provide insight into the quality and reliability of the predicted protein structure.
 
 
 
 
-  - title: "Virus Packaging"
+
+
+  - title: "Homologous recombination"
     content: |
       ### Principle
 
@@ -51,7 +130,8 @@ protocols:
 
 
 
-  - title: "Cell Culture"
+
+  - title: "Flow Cytometric Analysis"
     content: |
       ### Principle
 
@@ -115,7 +195,7 @@ protocols:
 
 
 
-  - title: "Organoids Construction"
+  - title: "Bio-layer interferometry"
     content: |
       ### Principle
 
@@ -162,7 +242,7 @@ protocols:
 
 
 
-  - title: "Development of Orthotopic Hepatocellular Tumor Mouse Models"
+  - title: "Molecular dynamics simulation"
     content: |
       ### Principle
 
@@ -185,7 +265,7 @@ protocols:
 
 
 
-  - title: "Development of Orthotopic Pancreatic Tumor Mouse Models"
+  - title: "Lactate dehydrogenase"
     content: |
       ### Principle
 
@@ -224,46 +304,6 @@ protocols:
       (5) Injection of tumor cell
 
       After anesthesia, the abdomen of the mouse was disinfected with povidone-iodine using a cotton swab. A longitudinal incision of approximately 1 cm was made in the left upper abdomen with ophthalmic surgical scissors. The spleen was gently elevated using a sterile cotton swab to visualize it, followed by careful exploration of the pancreas. Once the pancreas was located, the tip of the tail was grasped with curved ophthalmic forceps and gently pulled to expose the pancreas (care was taken to avoid rupturing the spleen). A 27-gauge needle was used with a 1 mL syringe to gently insert the needle into the pancreas from the tail end towards the head region, ensuring that it did not penetrate through the pancreas to prevent leakage of pancreatic fluid, which could lead to the death of the mouse. Each mouse received an injection of 50 μL containing 2×10⁷ cell/mL of tumor cell cells (successful injections were indicated by a visible small blister formation; if the pancreas was punctured, leakage of the cell suspension would be observed). After the injection, the direction of the needle was slightly adjusted, and the cell suspension was slowly injected while withdrawing the needle. Applying gentle pressure with a sterile cotton swab at the injection site for a moment effectively prevented leakage. The spleen and pancreas were then gently returned to the abdominal cavity, and the skin and peritoneum were sutured using 3-0 surgical sutures. Post-surgery, the mice were placed in a warm environment illuminated by incandescent light until they awakened naturally
-
-
-
-
-
-
-  - title: "PDOX Mouse Models"
-    content: |
-      ### Principle
-
-      Patient-derived organoid xenograft (PDOX) mouse model is a human xenograft model established based on the patient-derived organoid (PDO) model in immune-deficient mice. This method involves extracting cells from a patient's tumor tissue, culturing them into three-dimensional organoid samples in the laboratory, and then transplanting them into mice to form a xenograft model.
-
-      ### Method
-
-      1. Mouse Preparation: Use immunodeficient mice (e.g. NOD/SCID or NSG mice) to minimize immune rejection. Anesthetize the mice with isoflurane.
-
-      2. Surgical Procedure: Sterilize the surgical area and set up a sterile field. Make a small incision in the appropriate organ (e.g. mammary gland for breast cancer, liver for liver cancer or skin). Implant the minced tumor pieces or cells directly into the organ. For orthotopic placement, ensure proper alignment with the native tissue.
-
-      {{< image src="images/docs/protocol/p7.png" >}}
-
-
-
-
-
-
-
-  - title: "Detection of Effector Cell Cytotoxic Activity by LDH Assay"
-    content: |
-      ### Principle
-
-      The action of lactate dehydrogenase resulted in the reduction of NAD+ to form NADH. Subsequently, the combination of NADH and INT (2-p-iodophenyl-3-nitrophenyl tetrazolium chloride) was catalyzed by thioctylamine dehydrogenase (diaphorase) to form NAD+ and formazan. This process produced an absorption peak at 490 nm. Absorption peaks were generated at 490 nm, thus enabling the quantification of lactate dehydrogenase activity by colourimetry. Furthermore, the absorbance was found to be linearly and positively correlated with the activity of lactate dehydrogenase. Lactate dehydrogenase activity in cell lysates was assayed to evaluate the in vitro and ex vivo killing activity of CAR-NK cells. The schematic diagram of the principle is shown in Figure.
-
-      {{< image src="images/docs/protocol/p8.png" >}}
-
-      Fig. Principle of LDH Assay
-
-      ### Method
-
-      The cytotoxicity function of CAR-NK cells was assessed by co-culture tumor cells at an E:T (effector to target) ratio of 1:1. For lactate dehydrogenase (LDH), CytoTox96 cytotoxicity assay was used according to the manufacturer's instructions (Promega, G1780). Cytotoxicity (%) = [LDHE:T -LDHE]/LDHMax× 100%.
-
 
 
 

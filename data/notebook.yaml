@@ -1,6 +1,6 @@
 months:
   - id: "3"
-    image: "m3.png"
+    image: "note1.png"
     contents:
       - title: ""
         content: |
@@ -22,7 +22,7 @@ months:
 
 
   - id: "4"
-    image: "m4.png"
+    image: "note2.png"
     contents:
       - title: ""
         content: |
@@ -78,7 +78,7 @@ months:
 
 
   - id: "5"
-    image: "m5.png"
+    image: "note3.png"
     contents:
       - title: ""
         content: |
@@ -209,7 +209,7 @@ months:
           5. Attachment: [May. 10 LDH assay for measuring cytotoxic activity](/uploads/docs/May-p10.pdf)
 
   - id: "6"
-    image: "m6.png"
+    image: "note4.png"
     contents:
       - title: ""
         content: |
@@ -366,7 +366,7 @@ months:
 
 
   - id: "7"
-    image: "m7.png"
+    image: "note5.png"
     contents:
       - title: ""
         content: |
@@ -404,146 +404,3 @@ months:
 
           5.  Attachment: [Jul.03 Surface molecules detected by the flow cytometry](/uploads/docs/Jul-p3.pdf)
 
-  - id: "8"
-    image: "m8.png"
-    contents:
-      - title: ""
-        content: |
-          1. Experiment: Human pancreatic tumor organoids culture and passage
-
-          2. Time: 2024.08.01-2024.08.09
-
-          3. Member: Xiaoyuan Chen, Hanyue Liu
-
-          4. Summary: The experiment aims to culture and passage human pancreatic tumor organoids. It involves processing tumor tissue samples, digestion, centrifugation, seeding in plates with Matrigel, monitoring growth, and subculturing the organoids at approximately 70% confluence.
-
-          5. [Attachment: Aug.01 Human pancreatic tumor organoids culture and passage](/uploads/docs/Aug-p1.pdf)
-
-      - title: ""
-        content: |
-          1. Experiment: Co-culture of NK92 and human pancreatic tumor organoids
-
-          2. Time: 2024.08.10-2024.08.13
-
-          3. Member: Xiaoyuan Chen, Hanyue Liu
-
-          4. Summary: This experiment involves co-culturing NK-92 cells with human pancreatic tumor organoids to assess cytotoxicity, using a 48-well plate with a Matrigel layer and culture medium supplemented with Y-27632 and PGE2 for optimal growth conditions.
-
-          5. [Attachment: Aug.02 Co-culture of NK92 and human pancreatic tumor organoids](/uploads/docs/Aug-p2.pdf)
-
-      - title: ""
-        content: |
-          1. Experiment: Assess human pancreatic tumor organoid lysis
-
-          2. Time: 2024.08.14-2024.08.16
-
-          3. Member: Xiaoyuan Chen, Hanyue Liu
-
-          4. Summary: The experiment aims to assess the damage of human pancreatic tumor organoids using LDH Detection Reagent. It involves preparing LDH assay working solution, setting up controls, treating cells with test compounds, collecting samples, and measuring LDH activity to determine cytotoxicity.
-
-          5. [Attachment: Aug.03 Assess human pancreatic tumor organoid lysis](/uploads/docs/Aug-p3.pdf)
-
-      - title: ""
-        content: |
-          1. Experiment: Human hepatoma organoids culture and passage
-
-          2. Time: 2024.08.17-2024.08.20
-
-          3. Member: Xiaoyuan Chen, Hanyue Liu
-
-          4. Summary: The experiment details the culturing and passaging of human hepatoma organoids, including preparation of various culture media, tissue digestion, seeding in Matrigel, incubation, and passaging procedures when organoids reach approximately 70% density.
-
-          5.[Attachment: Aug.04 Human hepatoma organoids culture and passage](/uploads/docs/Aug-p4.pdf)
-
-      - title: ""
-        content: |
-          1. Experiment: Co-culture of NK92 and human hepatoma organoids
-
-          2. Time: 2024.08.21-2024.08.25
-
-          3. Member: Xiaoyuan Chen, Hanyue Liu
-
-          4. Summary: The main content of the experiment is the co-culture of NK92 cells with human hepatoma organoids to assess their cytotoxicity effect of NK cells.
-
-          5. [Attachment: Aug.05 Co-culture of NK92 and human hepatoma organoids](/uploads/docs/Aug-p5.pdf)
-
-      - title: ""
-        content: |
-          1. Experiment: Human hepatoma organoid lysis detection
-
-          2. Time: 2024.08.25-2024.08.31
-
-          3. Member: Xiaoyuan Chen, Hanyue Liu
-
-          4. Summary: The experiment evaluates human hepatoma organoid damage utilizing LDH detection reagent by monitoring LDH release from damaged cells.
-
-          5. [Attachment: Aug.06 Human hepatoma organoid lysis detection](/uploads/docs/Aug-p6.pdf)
-
-
-  - id: "9"
-    image: "m9.png"
-    contents:
-      - title: ""
-        content: |
-          1. Experiment: Construction of in situ tumor models
-
-          2. Time: 2024.09.01-2024.09.09
-
-          3. Member: Hanyue Liu, Yinran Luo
-
-          4. Summary:Pancreatic cancer cells AsPC1 were injected intraperitoneally into each mouse to construct in situ tumor models.
-
-          5. Attachment: [Sep.01 Construction of in situ tumor models](/uploads/docs/Sep-p1.pdf)
-
-
-      - title: ""
-        content: |
-          1. Experiment: Construction of in situ hepatic tumor models
-
-          2. Time: 2024.09.10-2024.09.15
-
-          3. Member: Xinyu Zhu, Song Zhang
-
-          4. Summary: To evaluate the impact of inhibitory signal-activated CAR-NK cells on in vivo anti-tumor activity, an in-situ tumor-bearing mouse model of liver cancer was established by inoculating Hep G2 cells into NCG mice.
-
-          5. Attachment: [Sep.02 Construction of in situ hepatic tumor models](/uploads/docs/Sep-p2.pdf)
-
-
-
-      - title: ""
-        content: |
-          1. Experiment: Adoptive cell transfer therapy targeting pancreatic cancer
-
-          2. Time: 2024.09.15-2024.09.20
-
-          3. Member: Yaqi Gao, Xiaoyuan Chen
-
-          4. Summary: NK92 cells and KARs/KIRs CAR-NK cells were delivered intravenously to the Model mice, pre-inoculated with luciferase-expressing HepG2 cells subcutaneously.
-
-          5. Attachment: [Sep. 03 Adoptive cell transfer therapy targeting pancreatic cancer](/uploads/docs/Sep-p3.pdf)
-
-
-
-      - title: ""
-        content: |
-          1. Experiment: Adoptive cell transfer therapy targeting liver cancer cells
-
-          2. Time: 2024.09.21-2024.09.25
-
-          3. Member: Song Zhang, Xudong Tang
-
-          4. Summary: NK92 cells and KARs/KIRs CAR-NK cells were delivered intravenously to the Model mice, pre-inoculated with luciferase-expressing HepG2 cells subcutaneously.
-
-          5. Attachment: [Sep.04 Adoptive cell transfer therapy targeting liver cancer cells](/uploads/docs/Sep-p4.pdf)
-
-      - title: ""
-        content: |
-          1. Experiment: Tumor volume detection
-
-          2. Time: 2024.09.25-2024.09.30
-
-          3. Member: Yinran Luo, Xinyu Zhu
-
-          4. Summary: Tumor diameters were recorded using a digital vernier caliper every 3 days.
-
-          5. Attachment: [Sep. 05 Tumor volume detection](/uploads/docs/Sep-p5.pdf)
