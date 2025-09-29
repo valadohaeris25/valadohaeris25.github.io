@@ -110,71 +110,83 @@ protocols:
         {{< image src="images/docs/protocol/p2.png" >}}
 
       **A. Vector linearization:**  The linearized vector was obtained via restriction enzyme digestion or inverse PCR.
-      
+
       **B. Insert fragment acquisition:** Homologous sequences corresponding to the 15-20 bp terminal regions of the linearized vector were added to the 5' ends of the gene-specific forward/reverse amplification primers. The insert fragment containing homologous arms was amplified using these primers.
-      
+
       **C. Recombination reaction:** The linearized vector and insert fragment were mixed at an optimal ratio, followed by a 5-30 minutes recombination reaction catalyzed by Exnase (2×CE Mix) at 50°C to achieve in vitro circularization of the multiple linear DNA fragments.
-      
+
       **D. Transformation of competent cells:** The recombinant products were directly transformed into competent cells, yielding hundreds of single colonies on agar plates for subsequent positive screening.
 
-      
+
       ### Method
-      
+
       **A.	Preparation of Linearized Vector**
-      
+
       1.  Suitable cloning sites are chosen for vector linearization. Sites lacking repetitive sequences and exhibiting GC content between 40% and 60% within the 20 bp regions upstream and downstream of the cloning site are preferentially selected.
-      
+
       2.	The vector can be linearized via restriction enzyme digestion or inverse PCR amplification.
-      
+
       **B.	Acquisition of Insert Fragment**
-      
+
       1.	**General primer design principles:** Homologous sequences corresponding to the termini of the linearized vector are introduced at the 5’-ends of the forward and reverse amplification primers for the insert fragment. This ensures that the amplified insert fragment contains terminal homologous sequences at its 5’ and 3’ ends that match the corresponding sequences of the linearized vector.
       Forward primer design: 5’–[Homologous sequence from upstream vector terminus] + [Restriction site (retained or removed)] + [Gene-specific forward primer sequence]–3’.
       Reverse primer design: 5’–[Homologous sequence from downstream vector terminus] + [Restriction site (retained or removed)] + [Gene-specific reverse primer sequence]–3’.
-      
-      2.	**PCR amplification of insert fragment:** The insert fragment is amplified using any PCR polymerase, with no requirement to consider the presence or absence of A-overhangs at the product termini. 
+
+      2.	**PCR amplification of insert fragment:** The insert fragment is amplified using any PCR polymerase, with no requirement to consider the presence or absence of A-overhangs at the product termini.
 
       **C.	Quantification of Linearized Vector and Insert Fragment**
-      
+
       1.	**Concentration determination:** DNA quantification is recommended to be performed via electrophoresis with band intensity comparison, as specified for the ClonExpress homologous recombination system.
 
       2.	**Calculation of vector fragment usage:** The optimal amount of linearized vector for the ClonExpress II recombination system is 0.03 pmol, while the optimal insert fragment amount is 0.06 pmol (molar ratio of vector to insert = 1:2).
+
       The corresponding DNA mass can be approximated using the following formulas:
+
       Optimal vector usage = [0.02 × vector base pairs] ng (equivalent to 0.03 pmol).
+
       Optimal insert usage = [0.04 × insert base pairs] ng (equivalent to 0.06 pmol).
 
       **D.	Recombination Reaction**
-      
+
       1.	The required amounts of DNA for the recombination reaction are calculated based on the formulas provided above. To ensure pipetting accuracy, the linearized vector and insert fragment may be appropriately diluted prior to assembling the recombination reaction system. The volume of each component added should not be less than 1 μl.
 
       2.	The following reaction system is prepared on ice:
 
-      3.	The reaction mixture is gently mixed by pipetting (vortexing is avoided), followed by brief centrifugation to collect the liquid at the bottom of the tube. 
+      Group  |	Linearized Vector (μl)  |		Insert Fragment (μl)  |		2×CE Mix (μl)  |		ddH2O (μl)
+        ----  | ----     | ----   | ----   | ----
+      Recombination	      |	X	   |	Y     |		5   |		to 20
+      Negative Control-1  |		X  |		0 |	0       |	to 20
+      Negative Control-2  |		0  |		Y |	0       |	to 20
+      Positive Control    |		1  |		0 |	5       |	to 20
+
+
+
+      3.	The reaction mixture is gently mixed by pipetting (vortexing is avoided), followed by brief centrifugation to collect the liquid at the bottom of the tube.
 
       4.	The reaction is incubated at 37°C for 30 min, then cooled to 4°C or immediately placed on ice.
 
       **E.	Transformation Procedure**
 
       1.	Cloning-competent cells are thawed on ice.
-      
+
       2.	10 μl of the recombination product is added to 100 μl of competent cells. The mixture is gently mixed by flicking the tube (vortexing is avoided) and incubated on ice for 30 min.
-      
+
       3.	Cells are heat-shocked in a 42°C water bath for 45 sec, then immediately transferred to ice for 2–3 min.
-      
+
       4.	900 μl of SOC or LB medium is added, followed by incubation at 37°C with shaking (200–250 rpm) for 1 h.
-      
+
       5.	LB agar plates containing the appropriate antibiotic are pre-warmed in a 37°C incubator.
-      
+
       6.	The culture is centrifuged at 2,400 × g for 5 min, and 900 μl of supernatant is discarded. The pellet is resuspended in the remaining medium and evenly spread onto the pre-warmed antibiotic-containing plates using a sterile spreading rod.
-      
+
       7.	Plates are inverted and incubated at 37°C for 12–16 h.
 
       **F.	Verification of Recombinant Products**
 
       1.	**Colony observation:** After overnight incubation, hundreds of single colonies are observed on the recombinant product transformation plate, while significantly fewer colonies are present on the negative control plate.
-      
+
       2.	**Colony PCR screening:** Several colonies from the recombinant plate are selected for colony PCR. At least one universal sequencing primer from the vector is used for amplification. A band slightly larger than the insert fragment size is expected if the clone is correct.
-      
+
       3.	**Further validation:** PCR-positive colonies are inoculated into liquid LB medium containing the appropriate antibiotic and cultured overnight. Plasmid DNA is extracted for restriction enzyme digestion analysis or directly subjected to Sanger sequencing.
 
 
@@ -198,54 +210,54 @@ protocols:
       **A. Cell resuscitation**
 
       1.	Co-culture target cells (K562) in logarithmic growth phase with effector cells.
-      
+
       2.	(pre-stimulated NK cells) at a specific effector-to-target ratio in a 37°C, 5% CO₂ incubator.
-      
+
       3.	Add Brefeldin A (diluted 1:1000) to the co-culture system 12 hours after initiation. Continue culture for a total of 46 hours.
-      
+
       4.	After co-culture, collect cells into flow cytometry tubes. Wash once with pre-chilled PBS, centrifuge at 300 × g for 5 minutes, and discard the supernatant.
-      
+
       5.	Resuspend cells in 100 μL flow cytometry staining buffer for cell counting.
 
 
       **B.	Surface Staining**
 
       1.	Dosage example for a 100 μL reaction system:CD3-PerCPCy5.5 (1:1000), CD56-PE (1: 1000).
-      
+
       2.	Add antibodies to the cell tube, gently mix by pipetting, and incubate at 4°C in the dark for 30 minutes.
-      
+
       3.	Wash with 2 mL staining buffer, centrifuge at 300 × g for 5 minutes, discard supernatant. Repeat washing once.
 
       **C.	Fixation and Membrane Permeabilization**
 
       1.	Resuspend cells in 100 μL fixative, incubate at room temperature in the dark for 15-20 minutes.
-      
+
       2.	Add 2 mL staining buffer, centrifuge, discard supernatant, and thoroughly remove fixative.
-      
+
       3.	Resuspend cells in 100 μL lysis buffer and incubate at room temperature in the dark for 15-20 minutes.
 
        **D.	Intracellular Staining**
 
       1.	Dilute intracellular antibodies in lysis buffer: Perforin-FITC (1:1000), Granzyme-BB421 (1: 1000), Centrifuge and discard lysis buffer.
-      
+
       2.	Add the intracellular antibody cocktail to the cell tube, gently pipette to mix, and incubate at room temperature in the dark for 30-45 minutes.
-      
+
       3.	Wash with 2 mL lysis buffer, centrifuge at 300 × g for 5 minutes, and discard the supernatant. Repeat the wash once.
-      
+
       4.	Resuspend cells in 300-500 μL flow cytometry staining buffer and analyze immediately.
 
        **E.	Data Analysis:**
 
       1.	The suspension was transferred to flow cytometry sample tubes.
-      
+
       2.	Analysis Strategy:
-      
+
       (1)	Gate to exclude doublets (using FSC-A vs FSC-H).
-      
+
       (2)	Gate to exclude dead cells (using a viability dye).
-      
+
       (3)	Identify the target cell population (NK cells: CD3⁻ CD56⁺).
-      
+
       (4)	Analyze PFN and GrB expression: Percentage of positive cells (%) and MFI.
 
 
@@ -265,9 +277,9 @@ protocols:
       ### Principle
 
       Bio-Layer Interferometry (BLI) is a label-free technology that converts the optical interference signals generated on the surface of a BLI biosensor into real-time response signals. By monitoring the molecular binding process in real time, the system measures the association constant (ka or kon), dissociation constant (kd or koff), and initial binding rate, and further derives affinity (KD) and concentration information through fitting and computational analysis.
-      
+
       Octet biosensors are constructed from glass optical fibers, with an additional specialized optical layer applied to the distal end. This optical layer provides a surface chemistry matrix for ligand immobilization. White light, encompassing all wavelengths within the visible spectrum, is introduced into the optical fiber and undergoes partial internal reflection at two interfaces: the interface between the glass fiber and the optical layer (which is fixed), and the interface between the surface chemistry and the solution (which is variable). The two beams of reflected light from these interfaces create an interference phenomenon. The instrument measures and records the intensity of the interfering light at each wavelength, generating an interference spectrum. Wavelengths that undergo constructive interference appear as peaks (high amplitude) on the spectrum, while those experiencing destructive interference appear as valleys (low amplitude). The Octet interaction analyzer detects molecular interactions by measuring changes in this interference spectrum in real time.
-      
+
       When molecules bind to the ligand immobilized on the biosensor surface, the thickness of the optical layer increases, resulting in a longer path length for the second reflected beam. This causes a shift in the interference spectrum towards longer wavelengths (a rightward shift). Conversely, when molecules dissociate from the ligand into the solution, the interference spectrum shifts back towards shorter wavelengths (a leftward shift). A plot of the shift in the interference spectrum (in nanometers) versus the time of the reaction is known as a Sensorgram. Based on the Sensorgram, the values of ka, kd, and KD can be determined by fitting the data to various binding models.
 
 

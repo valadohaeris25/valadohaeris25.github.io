@@ -467,26 +467,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
         list-style: disc;
       }
 
-      table {
-        table-layout: fixed;
 
-        border-collapse: collapse;
-        th, td {
-          padding: .75rem;
-          vertical-align: top;
-          border: 1px solid #666;
-        }
-
-        tr {
-          td:first-child {
-            width: 30%;
-          }
-        }
-        td {
-          // padding: 1rem 0;
-          word-break: break-all;
-        }
-      }
     }
   }
   .empty-init {
@@ -503,6 +484,31 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     color: $text-primary-color !important;
   }
 }
+
+.note-content, .pro-item-content-text  {
+  table {
+    table-layout: fixed;
+
+    border-collapse: collapse;
+    th, td {
+      padding: .75rem;
+      vertical-align: top;
+      border: 1px solid #666;
+    }
+
+    tr {
+      td:first-child {
+        width: 30%;
+      }
+    }
+    td {
+      // padding: 1rem 0;
+      word-break: break-all;
+    }
+  }
+}
+
+
 
 .page-docs-protocol {
 
