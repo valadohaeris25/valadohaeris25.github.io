@@ -313,6 +313,53 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
 
 
+
+  .g-label-1 {
+    @for $i from 1 through 5 {
+      li.part-item:nth-child(#{$i}) {
+        background-image: url('../images/docs/p#{$i}.png');
+      }
+    }
+  }
+
+
+  .g-label-2 {
+    @for $i from 1 through 5 {
+      li.part-item:nth-child(#{$i}) {
+        background-image: url('../images/docs/p#{$i + 5}.png');
+      }
+    }
+  }
+
+  .g-label-3 {
+    @for $i from 1 through 4 {
+      li.part-item:nth-child(#{$i}) {
+        background-image: url('../images/docs/p#{$i + 10}.png');
+      }
+    }
+  }
+
+  .g-label-4 {
+    @for $i from 1 through 2 {
+      li.part-item:nth-child(#{$i}) {
+        background-image: url('../images/docs/p#{$i + 14}.png');
+      }
+    }
+  }
+
+
+  .g-label-5 {
+    @for $i from 1 through 5 {
+      li.part-item:nth-child(#{$i}) {
+        background-image: url('../images/docs/p#{$i + 16}.png');
+      }
+    }
+  }
+
+
+
+
+
   .month-parts {
     display: flex  ;
     border-right: 4px solid #000;
@@ -331,11 +378,13 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
       background-repeat: no-repeat;
     }
 
-    @for $i from 1 through 21 {
-      li.part-item:nth-child(#{$i}) {
-        background-image: url('../images/docs/p#{$i}.png');
-      }
-    }
+
+    //@for $i from 1 through 21 {
+    //  li.part-item:nth-child(#{$i}) {
+    //    background-image: url('../images/docs/p#{$i}.png');
+    //  }
+    //}
+
 
     /*
     li.part-item:nth-child(1n) {
@@ -413,6 +462,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
       font-size: 1.5rem;
       font-weight: 400;
       font-family: "ARIAL";
+
+      ul {
+        list-style: disc;
+      }
+
       table {
         table-layout: fixed;
 

@@ -34,8 +34,11 @@
               <div class="sep2"><img src='{{"images/docs/sep2.png" | relURL }}'/></div>
             </div>
 
-            <ul class="  month-parts" v-if="reactiveData.currentMonthItem.contents.length > 0">
-              <li class="part-item" v-for="(item, index) in reactiveData.currentMonthItem.contents"
+            <ul class="  month-parts"
+                :class="'g-label-' + (reactiveData.currentMonthItem.id )"
+                v-if="reactiveData.currentMonthItem.contents.length > 0">
+              <li class="part-item"
+                  v-for="(item, index) in reactiveData.currentMonthItem.contents"
                   @click.prevent="showNoteContent(item, index)"
               >
                 <a class="month-part-item" href="#" >
