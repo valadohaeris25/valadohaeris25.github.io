@@ -1,27 +1,57 @@
 months:
-  - id: "3"
+  - id: "1"
     image: "note1.png"
     contents:
       - title: ""
         content: |
-          1.	Experiment: Determinate Binding Sites
-          2.	Time: 2024.08.03-2024.08.07
-          3.	Member: Xudong Tang, Yang Jin, Binxuan Zhang, Kaiqing Zhang, Xuantong Liu
-          4.	Method:
-          Through reference research, we identified the native binding sites for IL-2 receptor subunits β and γ as the active sites.
-          5.	Result:
+          **1.	Experiment**: Determinate Binding Sites
 
-          ###### Table.1 Native binding sites for IL-2 receptor subunits β and γ as the active sites
+          **2.	Time**: 2024.08.03-2024.08.07
 
-          Interleukin-2 subunits  |	Sequence
-          ---- | ----
-          Interleukin-2 receptor alpha chain  |		MDSYLLMWGLLTFIMVPGCQAELCDDDPPEIPHATFKAMAYKEGTMLNCECKRGFRRIKSGSLYMLCTGNSSHSSWDNQCQCTSSATRNTTKQVTPQPEEQKERKTTEMQSPMQPVDQASLPGHCREPPPWENEATERIYHFVVGQMVYYQCVQGYRALHRGPAESVCKMTHGKTRWTQPQLICTGEMETSQFPGEEKPQASPEGRPESETSCLVTTTDFQIQTEMAATMETSIFTTEYQVAVAGCVFLLISVLLLSGLTWQRRQRKSRRTI
-          Interleukin-2 receptor gamma chain  |		MLKPSLPFTSLLFLQLPLLGVGLNTTILTPNGNEDTTADFFLTTMPTDSLSVSTLPLPEVQCFVFNVEYMNCTWNSSSEPQPTNLTLHYWYKNSDNDKVQKCSHYLFSEEITSGCQLQKKEIHLYQTFVVQLQDPREPRRQATQMLKLQNLVIPWAPENLTLHKLSESQLELNWNNRFLNHCLEHLVQYRTDWDHSWTEQSVDYRHKFSLPSVDGQKRYTFRVRSRFNPLCGSAQHWSEWSHPIHWGSNTSKENPFLFALEAVVISVGSMGLIISLLCVYFWLERTMPRIPTLKNLEDLVTEYHGNFSAWSGVSKGLAESLQPDYSERLCLVSEIPPKGGALGEGPGASPCNQHSPYWAPPCYTLKPET
-          Interleukin-2 receptor beta chain   |		MAAPALSWRLPLLILLLPLATSWASAAVNGTSQFTCFYNSRANISCVWSQDGALQDTSCQVHAWPDRRRWNQTCELLPVSQASWACNLILGAPDSQKLTTVDIVTLRVLCREGVRWRVMAIQDFKPFENLRLMAPISLQVVHVETHRCNISWEISQASHYFERHLEFEARTLSPGHTWEEAPLLTLKQKQEWICLETLTPDTQYEFQVRVKPLQGEFTTWSPWSQPLAFRTKPAALGKDTIPWLGHLLVGLSGAFGFIILVYLLINCRNTGPWLKKVLKCNTPDPSKFFSQLSSEHGGDVQKWLSSPFPSSSFSPGGLAPEISPLEVLERDKVTQLLLQQDKVPEPASLSSNHSLTSCFTNQGYFFFHLPDALEIEACQVYFTYDPYSEEDPDEGVAGAPTGSSPQPLQPLSGEDDAYCTFPSRDDLLLFSPSLLGGPSPPSTAPGGSGAGEERMPPSLQERVPRDWDPQPLGPPTPGVPDLVDFQPPPELVLREAGEEVPDAGPREGVSFPWSRPPGQGEFRALNARLPLNTDAYLSLQELQGQDPTHLV
+          **3.	Member**: Xudong Tang, Yang Jin, Binxuan Zhang, Kaiqing Zhang, Xuantong Liu
+
+          **4.	Method**: Through reference research, we identified the native binding sites for IL-2 receptor subunits β and γ as the active sites.
+
+          **5. Attachment**: [Determinate Binding Sites]("/uploads/docs/notebook/pdf/1 Determinate Binding Sites.pdf")
 
 
+      - title: ""
+        content: |
+          **1.	Experiment**: RFDiffusion-Based Protein Design
 
-  - id: "4"
+          **2.	Time**: 2024.08.29-2024.09.28
+
+          **3.	Member**: Xudong Tang, Yang Jin, Binxuan, Zhang, Kaiqing Zhang, Xuantong Liu
+
+          **4.	Method**: |
+
+            RFDiffusion is a cutting-edge method for de novo protein structure and function design, leveraging the capabilities of deep learning and diffusion models. It is based on the RoseTTAFold (RF) structure prediction network, fine-tuned on protein structure denoising tasks. The principle behind RFDiffusion is to generate protein backbones by iteratively refining noise-corrupted structures, eventually producing functional and structurally accurate proteins from simple molecular specifications.
+            (1)	Core Components:
+            ①	Denoising Diffusion Probabilistic Models (DDPMs): These models are trained to reverse the process of adding Gaussian noise to protein structures, thereby generating new, realistic protein structures.
+            ②	Rotational Equivariance: RFDiffusion maintains rotational equivariance, allowing it to model three-dimensional (3D) structures in a global representation frame independent manner.
+            ③	Conditioning Information: The model can be guided towards specific design objectives by providing conditioning information at each step of the generation process.
+            (2)	The procedure of RFDiffusion:
+              ①	Model Training
+            	Data Preparation: Sample protein structures from the Protein Data Bank (PDB) and introduce noise to create training inputs.
+            	Noise Application: Perturb Cα coordinates with 3D Gaussian noise and apply Brownian motion to residue orientations.
+            	Model Training: Train the RFDiffusion model by minimizing the mean-squared error (MSE) loss between frame predictions and the true protein structure.
+              ②	Protein Design
+            	Initialization: Start with random residue frames.
+            	Denoising Iterations: Iteratively refine the protein structure by denoising the noisy input, adding noise at each step to generate the input for the next iteration.
+            	Sequence Design: Use the ProteinMPNN network to design sequences encoding the generated protein structures.
+              ③	Conditioning for Specific Designs
+            	Unconditional Design: Generate diverse protein structures without additional input.
+            	Topology-Constrained Design: Provide secondary structure and/or fold information to guide the design towards specific topologies.
+            	Symmetric Oligomer Design: Specify point group symmetry to create symmetric oligomeric structures.
+              ④	Experimental Characterization
+            	Expression and Purification: Express the designed proteins in a suitable host and purify them for further analysis.
+            	Structural Verification: Use techniques such as circular dichroism (CD) and cryo-electron microscopy (cryo-EM) to verify the structure and stability of the designed proteins.
+            	Functional Validation: Assess the functionality of the designed proteins through binding assays, enzymatic activity tests, or other relevant functional assays.
+
+          **5.	Result**:
+
+
+  - id: "2"
     image: "note2.png"
     contents:
       - title: ""
@@ -77,7 +107,7 @@ months:
 
 
 
-  - id: "5"
+  - id: "3"
     image: "note3.png"
     contents:
       - title: ""

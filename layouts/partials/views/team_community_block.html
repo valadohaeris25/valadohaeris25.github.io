@@ -9,7 +9,13 @@
   </div>
 
   <div class="col-12 col-md-6 c-block-text common-text-content-wrap ">
-    <div class="c-title-image"><img  src="{{$item.title_image | relURL }}" /></div>
+    <div class="c-title-image">
+      {{/*<img  src="{{$item.title_image | relURL }}" />*/}}
+      <div><img  src="{{ "images/design/title-logo.png" | relURL }}" /></div>
+      <div class="c-t-logo-text">
+          {{$item.logo_title | markdownify | emojify }}
+      </div>
+    </div>
     <div class="c-title-text">{{$item.title | markdownify | emojify }}</div>
     <div class="c-content-text">{{$item.content | markdownify | emojify }}</div>
   </div>

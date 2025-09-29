@@ -231,7 +231,18 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
 
   .c-title-image {
+    display: flex;
+    align-items: center;
+    .c-t-logo-text {
+      background-color: #000000;
+      border-radius: 0.5rem;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      margin: 0 0 0 2rem;
+      font-size: 2rem;
+    }
     img {
+      height: 10rem;
       margin: 0 auto;
     }
   }

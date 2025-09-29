@@ -36,15 +36,15 @@ main:
 
   - name: Report
     parent: Project
-#    url: 'uploads/project/report.pdf'
-    url: 'project/report'
+    url: 'uploads/project/report.pdf'
+#    url: 'project/report'
     weight: 40
 
 
   - name: Supplementary information
     parent: Project
-#    url: 'uploads/project/supplementary.pdf'
-    url: 'project/supplementary_information'
+    url: 'uploads/project/supplementary.pdf'
+#    url: 'project/supplementary_information'
     weight: 50
 
 
