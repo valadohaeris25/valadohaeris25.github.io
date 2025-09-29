@@ -264,13 +264,16 @@ protocols:
     content: |
       ### Principle
 
-      Organoid culture technology refers to a group of cells with self-renewal and self-organisation capabilities cultured in an in vitro environment. These cells can be derived from primary cells, embryonic stem cells or multipotent stem cells. They possess organ-like structure and function and can mimic in vivo tissue structure and function to the greatest extent possible. They can also be passaged long-term and used as an experimental model for patient individualization.
+      Bio-Layer Interferometry (BLI) is a label-free technology that converts the optical interference signals generated on the surface of a BLI biosensor into real-time response signals. By monitoring the molecular binding process in real time, the system measures the association constant (ka or kon), dissociation constant (kd or koff), and initial binding rate, and further derives affinity (KD) and concentration information through fitting and computational analysis.
+      
+      Octet biosensors are constructed from glass optical fibers, with an additional specialized optical layer applied to the distal end. This optical layer provides a surface chemistry matrix for ligand immobilization. White light, encompassing all wavelengths within the visible spectrum, is introduced into the optical fiber and undergoes partial internal reflection at two interfaces: the interface between the glass fiber and the optical layer (which is fixed), and the interface between the surface chemistry and the solution (which is variable). The two beams of reflected light from these interfaces create an interference phenomenon. The instrument measures and records the intensity of the interfering light at each wavelength, generating an interference spectrum. Wavelengths that undergo constructive interference appear as peaks (high amplitude) on the spectrum, while those experiencing destructive interference appear as valleys (low amplitude). The Octet interaction analyzer detects molecular interactions by measuring changes in this interference spectrum in real time.
+      
+      When molecules bind to the ligand immobilized on the biosensor surface, the thickness of the optical layer increases, resulting in a longer path length for the second reflected beam. This causes a shift in the interference spectrum towards longer wavelengths (a rightward shift). Conversely, when molecules dissociate from the ligand into the solution, the interference spectrum shifts back towards shorter wavelengths (a leftward shift). A plot of the shift in the interference spectrum (in nanometers) versus the time of the reaction is known as a Sensorgram. Based on the Sensorgram, the values of ka, kd, and KD can be determined by fitting the data to various binding models.
 
-      Typical organoid culture protocols commence with the isolation of embryonic stem cells or pluripotent stem cells, which are subsequently cultured in a supportive medium to facilitate three-dimensional cell growth. The signaling pathways that mediate organoid formation are the same as those used for organ development and maintenance of homeostasis in vivo. Consequently, a variety of cytokines, growth factors and small molecule compounds must be introduced during the culture process in order to activate or inhibit specific cell signaling pathways. The primary component of the culture is Matrix Gel, a natural soluble basement membrane matrix extracted from extracellular matrix protein-rich mouse tumors. It consists of a range of extracellular matrix components, including laminin, collagen type IV and nestin, and provides support, tensile strength and scaffolding support for tissues and cells (Fig.).
 
       {{< image src="images/docs/protocol/p4.png" >}}
 
-      Fig. Hepatocellular carcinoma organoid construction
+      Fig. Experimental steps of biolayer interferometry.
 
 
 
