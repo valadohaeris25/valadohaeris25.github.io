@@ -109,41 +109,41 @@ protocols:
 
         {{< image src="images/docs/protocol/p2.png" >}}
 
-      **A. Vector linearization:**  The linearized vector was obtained via restriction enzyme digestion or inverse PCR.
+      ** A. Vector linearization: **  The linearized vector was obtained via restriction enzyme digestion or inverse PCR.
       
-      **B. Insert fragment acquisition:** Homologous sequences corresponding to the 15-20 bp terminal regions of the linearized vector were added to the 5' ends of the gene-specific forward/reverse amplification primers. The insert fragment containing homologous arms was amplified using these primers.
+      ** B. Insert fragment acquisition: ** Homologous sequences corresponding to the 15-20 bp terminal regions of the linearized vector were added to the 5' ends of the gene-specific forward/reverse amplification primers. The insert fragment containing homologous arms was amplified using these primers.
       
-      **C. Recombination reaction: ** The linearized vector and insert fragment were mixed at an optimal ratio, followed by a 5-30 minutes recombination reaction catalyzed by Exnase (2×CE Mix) at 50°C to achieve in vitro circularization of the multiple linear DNA fragments.
+      ** C. Recombination reaction: ** The linearized vector and insert fragment were mixed at an optimal ratio, followed by a 5-30 minutes recombination reaction catalyzed by Exnase (2×CE Mix) at 50°C to achieve in vitro circularization of the multiple linear DNA fragments.
       
-      **D. Transformation of competent cells:** The recombinant products were directly transformed into competent cells, yielding hundreds of single colonies on agar plates for subsequent positive screening.
+      ** D. Transformation of competent cells: ** The recombinant products were directly transformed into competent cells, yielding hundreds of single colonies on agar plates for subsequent positive screening.
 
       
       ### Method
       
-      ** A.	Preparation of Linearized Vector**
+      ** A.	Preparation of Linearized Vector **
       
       1.  Suitable cloning sites are chosen for vector linearization. Sites lacking repetitive sequences and exhibiting GC content between 40% and 60% within the 20 bp regions upstream and downstream of the cloning site are preferentially selected.
       
       2.	The vector can be linearized via restriction enzyme digestion or inverse PCR amplification.
       
-      **B.	Acquisition of Insert Fragment**
+      ** B.	Acquisition of Insert Fragment **
       
-      1.	**General primer design principles:** Homologous sequences corresponding to the termini of the linearized vector are introduced at the 5’-ends of the forward and reverse amplification primers for the insert fragment. This ensures that the amplified insert fragment contains terminal homologous sequences at its 5’ and 3’ ends that match the corresponding sequences of the linearized vector.
+      1.	** General primer design principles: ** Homologous sequences corresponding to the termini of the linearized vector are introduced at the 5’-ends of the forward and reverse amplification primers for the insert fragment. This ensures that the amplified insert fragment contains terminal homologous sequences at its 5’ and 3’ ends that match the corresponding sequences of the linearized vector.
       Forward primer design: 5’–[Homologous sequence from upstream vector terminus] + [Restriction site (retained or removed)] + [Gene-specific forward primer sequence]–3’.
       Reverse primer design: 5’–[Homologous sequence from downstream vector terminus] + [Restriction site (retained or removed)] + [Gene-specific reverse primer sequence]–3’.
       
-      2.	**PCR amplification of insert fragment:** The insert fragment is amplified using any PCR polymerase, with no requirement to consider the presence or absence of A-overhangs at the product termini. 
+      2.	** PCR amplification of insert fragment: ** The insert fragment is amplified using any PCR polymerase, with no requirement to consider the presence or absence of A-overhangs at the product termini. 
 
-      **C.	Quantification of Linearized Vector and Insert Fragment**
+      ** C.	Quantification of Linearized Vector and Insert Fragment **
       
-      1.	**Concentration determination:** DNA quantification is recommended to be performed via electrophoresis with band intensity comparison, as specified for the ClonExpress homologous recombination system.
+      1.	** Concentration determination: ** DNA quantification is recommended to be performed via electrophoresis with band intensity comparison, as specified for the ClonExpress homologous recombination system.
 
-      2.	**Calculation of vector fragment usage:** The optimal amount of linearized vector for the ClonExpress II recombination system is 0.03 pmol, while the optimal insert fragment amount is 0.06 pmol (molar ratio of vector to insert = 1:2).
+      2.	** Calculation of vector fragment usage: ** The optimal amount of linearized vector for the ClonExpress II recombination system is 0.03 pmol, while the optimal insert fragment amount is 0.06 pmol (molar ratio of vector to insert = 1:2).
       The corresponding DNA mass can be approximated using the following formulas:
       Optimal vector usage = [0.02 × vector base pairs] ng (equivalent to 0.03 pmol).
       Optimal insert usage = [0.04 × insert base pairs] ng (equivalent to 0.06 pmol).
 
-      **D.	Recombination Reaction**
+      ** D.	Recombination Reaction **
       
       1.	The required amounts of DNA for the recombination reaction are calculated based on the formulas provided above. To ensure pipetting accuracy, the linearized vector and insert fragment may be appropriately diluted prior to assembling the recombination reaction system. The volume of each component added should not be less than 1 μl.
 
@@ -153,7 +153,7 @@ protocols:
 
       4.	The reaction is incubated at 37°C for 30 min, then cooled to 4°C or immediately placed on ice.
 
-      **E.	Transformation Procedure**
+      ** E.	Transformation Procedure **
 
       1.	Cloning-competent cells are thawed on ice.
       
@@ -169,13 +169,13 @@ protocols:
       
       7.	Plates are inverted and incubated at 37°C for 12–16 h.
 
-      **F.	Verification of Recombinant Products**
+      ** F.	Verification of Recombinant Products **
 
-      1.	**Colony observation:** After overnight incubation, hundreds of single colonies are observed on the recombinant product transformation plate, while significantly fewer colonies are present on the negative control plate.
+      1.	** Colony observation: ** After overnight incubation, hundreds of single colonies are observed on the recombinant product transformation plate, while significantly fewer colonies are present on the negative control plate.
       
-      2.	**Colony PCR screening:** Several colonies from the recombinant plate are selected for colony PCR. At least one universal sequencing primer from the vector is used for amplification. A band slightly larger than the insert fragment size is expected if the clone is correct.
+      2.	** Colony PCR screening: ** Several colonies from the recombinant plate are selected for colony PCR. At least one universal sequencing primer from the vector is used for amplification. A band slightly larger than the insert fragment size is expected if the clone is correct.
       
-      3.	**Further validation:** PCR-positive colonies are inoculated into liquid LB medium containing the appropriate antibiotic and cultured overnight. Plasmid DNA is extracted for restriction enzyme digestion analysis or directly subjected to Sanger sequencing.
+      3.	** Further validation: ** PCR-positive colonies are inoculated into liquid LB medium containing the appropriate antibiotic and cultured overnight. Plasmid DNA is extracted for restriction enzyme digestion analysis or directly subjected to Sanger sequencing.
 
 
 
@@ -195,52 +195,61 @@ protocols:
 
       ### Method
 
-      1. Cell resuscitation
+      ** A. Cell resuscitation **
 
-      (1) Put the required equipment, such as 10 mL pipette, pipette gun, 1 mL gun head, 50 mL centrifuge tube, culture bottle, etc. on the ultra-clean working table. Start the operation after 30 min of ultraviolet light irradiation and 30 min of ventilation.
-
-      (2) Preheat the culture medium.
-
-      (3) Disinfect the utensils with 75% alcohol and put them into the ultra-clean bench.
-
-      (4) The frozen cells were taken out from the liquid nitrogen tank.
-
-      (5) The frozen cells were placed in a water bath at 37 °C and rapidly melted by rapid shaking.
-
-      (6) Disinfect the utensils with 75% alcohol and put them into the ultra-clean bench.
-
-      (7) Take 9 mL medium to 50 mL centrifuge tube.
-
-      (8) The thawed cell suspension was pipetted into a centrifuge tube with a 1mL tip.
-
-      (9) Centrifugation at 1000 rpm/min for 5 min.
-
-      (10)   Disinfect the utensils with 75% alcohol and put them into the ultra-clean bench.
-
-      (11)   Aspirate the supernatant.
-
-      (12)   The cells were resuspended in 1 mL medium, and the cell suspension was transferred to the culture flask. Add an appropriate amount of medium, gently shake the culture flask to evenly distribute the cells and mark them.
-
-      (13)   The restored cell density and state were observed under a microscope.
-
-      (14)   Put the cells back into the incubator for static culture.
-
+      1.	Co-culture target cells (K562) in logarithmic growth phase with effector cells.
       
+      2.	(pre-stimulated NK cells) at a specific effector-to-target ratio in a 37°C, 5% CO₂ incubator.
+      
+      3.	Add Brefeldin A (diluted 1:1000) to the co-culture system 12 hours after initiation. Continue culture for a total of 46 hours.
+      
+      4.	After co-culture, collect cells into flow cytometry tubes. Wash once with pre-chilled PBS, centrifuge at 300 × g for 5 minutes, and discard the supernatant.
+      
+      5.	Resuspend cells in 100 μL flow cytometry staining buffer for cell counting.
 
 
-      2. Exchange medium
+      ** B.	Surface Staining **
 
-      (1) The PBS buffer solution (autoclaved) and the complete medium were prepared in advance and wiped with alcohol before moving into the biological safety cabinet.
+      1.	Dosage example for a 100 μL reaction system:CD3-PerCPCy5.5 (1:1000), CD56-PE (1: 1000).
+      
+      2.	Add antibodies to the cell tube, gently mix by pipetting, and incubate at 4°C in the dark for 30 minutes.
+      
+      3.	Wash with 2 mL staining buffer, centrifuge at 300 × g for 5 minutes, discard supernatant. Repeat washing once.
 
-      (2) Change the medium: the adherent cells were completely changed, the old medium was removed, washed with PBS for 2-3 times, and then the fresh medium was added. The suspension cells were replaced with half of the medium, half of the old medium was removed, and then fresh medium was added. The culture could also be transferred to a centrifuge tube, and the old medium was removed by centrifugation, and then the new medium was added to re-suspend the cells.
+      ** C.	Fixation and Membrane Permeabilization **
 
-      3. Cell passages
+      1.	Resuspend cells in 100 μL fixative, incubate at room temperature in the dark for 15-20 minutes.
+      
+      2.	Add 2 mL staining buffer, centrifuge, discard supernatant, and thoroughly remove fixative.
+      
+      3.	Resuspend cells in 100 μL lysis buffer and incubate at room temperature in the dark for 15-20 minutes.
 
-      (1) Complete medium, PBS, trypsin, petri dishes, centrifuge tubes, etc. were prepared in advance, and transferred into a biological safety cabinet after alcohol wiping.
+       ** D.	Intracellular Staining **
 
-      (2) The old medium was discarded, and then washed 2-3 times with PBS, 1 mL trypsin was added, and the cells were digested. When the cells became round under the microscope, 1 mL medium was added immediately to terminate the digestion, and then the cells were scanned layer by layer. The cell suspension was added to the centrifuge tube, 1000 rpm, 5 min.
+      1.	Dilute intracellular antibodies in lysis buffer: Perforin-FITC (1:1000), Granzyme-BB421 (1: 1000), Centrifuge and discard lysis buffer.
+      
+      2.	Add the intracellular antibody cocktail to the cell tube, gently pipette to mix, and incubate at room temperature in the dark for 30-45 minutes.
+      
+      3.	Wash with 2 mL lysis buffer, centrifuge at 300 × g for 5 minutes, and discard the supernatant. Repeat the wash once.
+      
+      4.	Resuspend cells in 300-500 μL flow cytometry staining buffer and analyze immediately.
 
-      (3) After centrifugation, the medium was discarded, the new medium was added to blow the re-suspended cells, and then added to the culture dish, 0.5 or 1 mL cell suspension was added to each culture dish.
+       ** E.	Data Analysis: **
+
+      1.	The suspension was transferred to flow cytometry sample tubes.
+      
+      2.	Analysis Strategy:
+      
+      (1)	Gate to exclude doublets (using FSC-A vs FSC-H).
+      
+      (2)	Gate to exclude dead cells (using a viability dye).
+      
+      (3)	Identify the target cell population (NK cells: CD3⁻ CD56⁺).
+      
+      (4)	Analyze PFN and GrB expression: Percentage of positive cells (%) and MFI.
+
+
+
 
 
 
