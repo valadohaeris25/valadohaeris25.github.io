@@ -181,22 +181,6 @@ protocols:
 
 
 
-      1. Cell Preparation: Seed HEK293T cells in a 10 cm dish at a density of 3-4 × 106 cells per dish in DMEM supplemented with 10% FBS and 1% Pen-Strep. Incubate the cells at 37 °C in a 5% CO₂ atmosphere until they reach 70-80% confluence (approximately 24 hours).
-
-      2. Transfection: Prepare the DNA-PEI complex. For each 10 cm dish, use 10 µg of the lentiviral transfer plasmid, 5 µg of pMD2.G, and 7.5 µg of psPAX2. Dilute the plasmids in 500 µL of serum-free DMEM. Separately, dilute 60 µL of 1 mg/mL PEI in 500 µL of serum-free DMEM. Combine the DNA solution with the PEI solution, mix gently, and incubate at room temperature for 20 min to allow the formation of DNA-PEI complexes.
-
-      3. Transfection Addition: Add the DNA-PEI complex dropwise to the HEK293T cells. Swirl the dish gently to distribute the complex evenly. Incubate the cells at 37°C in a 5% CO₂ atmosphere.
-
-      4. Medium Change: After 6-8 hours, replace the transfection medium with fresh DMEM supplemented with 10% FBS and 1% Pen-Strep to reduce toxicity.
-
-      5. Virus Harvesting: Collect the supernatant containing lentiviral particles at 48 and 72 hours post-transfection. Pool the supernatants and centrifuge at 500 × g for 10 min to remove cell debris.
-
-      6. Supernatant Filtration: Filter the supernatant through a 0.45 µm filter to ensure the removal of any remaining cellular debris.
-
-      7. Virus Concentration: Concentrate the viral particles by ultracentrifugation at 25,000 rpm for 2 hours at 4°C. Carefully remove the supernatant and resuspend the viral pellet in an appropriate volume of PBS or DMEM.
-
-      8. Virus Storage: Aliquot the concentrated virus and store at -80 °C until use. Avoid repeated freeze-thaw cycles.
-
 
 
 
@@ -205,7 +189,9 @@ protocols:
     content: |
       ### Principle
 
-      Using artificially controlled environmental conditions to simulate the in vivo environment, cells grow and divide in vitro. In this process, cells are regulated and influenced by many factors, such as temperature, humidity, pH, nutrients, etc. Through proper regulation and control of these factors, the normal growth and division of cells can be maintained, and the biological characteristics of cells can be maintained.
+      Perforin (PFN) and granzyme (GrB) are key effector molecules for natural killer (NK) cell cytotoxicity, stored within cytoplasmic granules. In this experiment, their secretion was inhibited using the protein transport inhibitor Brefeldin A, causing intracellular accumulation. Following fixation and membrane disruption, fluorescent antibodies were introduced to bind specifically to these molecules within the cells, enabling quantitative detection via flow cytometry.
+
+      {{< image src="images/docs/protocol/p3.png" >}}
 
       ### Method
 
