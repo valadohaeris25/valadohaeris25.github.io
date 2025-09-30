@@ -8,14 +8,14 @@ layout: background
 ---
 
  
-{{< image src="images/project/result/r1.png" >}}
+{{< image src="images/project/result/r1.png" style="width: 60%;" >}}
  
 1. Innovative eCAR Technology: The novel chimeric receptor, eCAR, through charge-induced oligomerization enhances lymphocyte proliferation and activation, offering a promising approach for cancer immunotherapy.
 2. Enhanced NK Cell Effectiveness: By integrating an NKR library within the eCAR, the engineered NK cells exhibit ligand-dependent cytotoxicity, effectively targeting a wide range of tumor cells and tumor-derived organoids.
 3. Broad-Spectrum Cancer Immunotherapy: This study introduces a new strategy for NK cell-based therapy, utilizing an NKR library as a sensor to achieve targeted and efficient destruction of tumor cells across various malignancies.
 
 
-{{< image src="images/project/result/r2.png" style="height: 500px;" >}}
+{{< image src="images/project/result/r2.png"  style="width: 40%;"  >}}
 
 # 1.	Developing peptide for selectively binding of IL-2Rβ and IL-2Rγ via de novo design
 
