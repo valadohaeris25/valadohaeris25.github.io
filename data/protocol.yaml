@@ -291,29 +291,22 @@ protocols:
 
       ### Method
 
-      1. The process of digesting human liver tumor tissue
+      **A.	Sensor pre-humidification:** Pre-wet plates were placed in a blue chassis (corner A1 of the sample plate needed to be snapped into the snap hole of the blue tray), and 200 μL of analytical buffer, such as PBST buffer and MES buffer, was added to the well where the sensor was placed. The sensor was placed on the green disk, and then the green disk was snapped onto the blue disk. The sensor needed to be pre-wetted for over 10 minutes.
 
-      (1) The tumor tissue should be chopped into pieces measuring between 0.5 and 1 mm³ under sterile conditions and placed into a 100 mm petri dish.
+      **B.	Methods Edit:**  Within the Experiment Wizard software, the "New Kinetics Experiment-Basic Kinetics" option was selected. Following this, the protocol setup interface was accessed. The Basic Kinetics Experiment window was maximized, and the following five steps were sequentially edited:
 
-      (2) The chopped tissue should then be submerged into a 15 mL centrifuge tube, with approximately 10 mL of ice-cold washing medium added. The tissue should then be gently agitated with a 10 mL pipette to precipitate the tumor tissue. The supernatant, including blood cells and floating fat mass, should be discarded, and this step should be repeated once.
+      **1.	Plate Definition:** In the Plate Definition setup, four sample columns were designated as follows: Buffer1 was assigned to the baseline1 step, Load to the loading step, Buffer2 to both the baseline2 and dissociation steps, and Sample to the association step. The samples consisted of different test sequences at identical concentrations, with each well being loaded with 200 μg/L of the respective sample. Following the completion of parameter configuration, the experiment was initiated.
 
-      (3) A volume of approximately 4-5 mL of pre-warmed human liver digest should be added per gram of tissue. The solution should then be placed on a test-tube rotary shaker in an incubator at 37 °C, mixed thoroughly, and allowed to digest.
+      **2.	Assay definition:**  In the assay definition, the setup steps were followed by first clicking "Add" in the window to include the required analysis steps and set the duration for each one. The following steps were added: Baseline (60 s), Loading (120 s), Baseline2 (120 s), Association (180 s), and Dissociation (180 s), after which "OK" was clicked to confirm the selections. If any parameter required modification, it was edited by double-clicking. Next, in the "Step Data List," the Baseline step was clicked, the arrow was moved to Baseline to indicate that the detection position for this step on the sample plate would be configured, and then the first column of samples on the sample plate was double-clicked, so that at the start of the experiment, the Baseline step would be detected using the samples in the first column (buffer). The "Assay Steps List" then displayed the first added step, showing that the Baseline analysis was performed using samples from the first column, with "No" indicating the step number, "Sample" representing the analysis location on the sample plate, and "Sensor Type" specifying the sensor selected for analysis. This process was repeated to complete the experimental setup for the entire kinetic analysis.
 
-      (4) Following a 30-minute digestion period, the solution should be agitated to ascertain the presence of single cells. In the event of a low concentration of single cells, the solution should be returned to 37 °C and the digestion process continued. The suspension should be monitored at 10-minute intervals for a maximum of 90 min, with digestion halted when the suspension contains 80-100% single cells.
+      **3.	Sensor assignment:**  In the sensor assignment, the sensor position was configured.
 
-      (5) Upon completion of the digestion process, the solution should be filtered through a 70 µm filter and then through a second filter, which should be pre-cooled, before being added to the washing medium.
+      **4.	Review Experiment:** Clicking the buttons allowed browsing the previous or next step of the experiment respectively, enabling preview and verification of all experimental steps.
 
-      (6) Centrifuge at 4 ℃ and 300×g for 5 min, discard the supernatant, and add pre-cooled washing medium to 15 mL.
+      **5.	Run Experiment:** After the setup was completed, the "Start Experiment" button was clicked. Before the experiment was initiated, it was ensured that the samples and sensors were properly placed and the instrument door was securely closed.
 
-      (7) Centrifuge at 300×g for 5 min at 4 °C, discard the supernatant, and then add pre-cooled washing medium to 15 mL.
+      **C.	Result Analysis:** The related data were acquired and processed using the data analysis software of the Octet system. Through this analysis, sensor grams were generated, from which kinetic parameters including KD, Kon, Koff, and steady-state fitting curves were derived. The consistency between the fitted and measured curves was evaluated. If the fitted curve showed strong agreement with the experimental curve, it indicated high quality of the fitting results. Based on these data, a comprehensive assessment of the binding affinity between the test sequences and the receptor was performed.
 
-      2. Inoculation of liver cancer cells
-
-      (1) The supernatant should be removed, and the cells should be resuspended in BME2 matrix gel. The cells should then be inoculated into 24-well plates with the matrix gel kept at a low temperature throughout the process.
-
-      (2) Add 500 µL of medium per well in the 24-well plate and incubate in a cell culture box.
-
-      (3) The medium should be replaced with a fresh one after a period of three to four days.
 
 
 
@@ -326,19 +319,44 @@ protocols:
     content: |
       ### Principle
 
-      Immunodeficient mice are a kind of mice whose immune system function is inhibited or lost through genetic modification, which makes them an important experimental tool in many biomedical research fields. Because of their incomplete immune system, these mice can receive xenotransplantation of cells or tissues, such as humans, for a variety of research applications.
+      Molecular Dynamics (MD) refers to a computational simulation method used to study the physical movements of atoms and molecules over time, providing insights into their dynamic behavior at the atomic scale.
+
+      {{< image src="images/docs/protocol/p5.png" >}}
+
+      Figure 1. Work flow of Molecular dynamics simulation
 
       ### Method
 
-      The luciferase gene-labeled HCC cell line in the logarithmic growth phase was digested and prepared into 5×107 cell/mL cell suspension by HBSS.
+      **A.	System Preparation**
+      1.	The receptor structure is modeled based on the X-ray crystal structure. The designed protein's three-dimensional structure is predicted using AlphaFold3 and subjected to preliminary optimization.
 
-      1. The NCG mice were anesthetized and opened about 1 cm horizontally under the xiphoid process, and part of the liver was exposed by squeezing the left and right abdominal cavity. 100 μL of the prepared cells were injected into the liver of the nude mice with 1 mL insulin injection needle. At the same time, the needle was drawn and the assistant used Vetbond Tissue Adhesive to quickly close the pinhole to prevent bleeding and tumor cell outflow to form intraperitoneal implantation.
+      2.	Molecular docking is performed using HADDOCK software to obtain the initial binding structure of the receptor-protein complex. The structure with the lowest binding energy and optimal electrostatic interactions is selected as the initial conformation for subsequent molecular dynamics simulations.
 
-      2. The liver was gently pushed back into the abdominal cavity with a cotton rod wet with normal saline, and the abdomen was closed.
+      3.	The complex is placed in a periodic cubic water box, ensuring a minimum distance of 12 Å between any protein atom and the box boundary to provide sufficient solvation. The solvent environment is constructed using the TIP3P water model, with Na+ and Cl- ions added to neutralize the system and simulate physiological salt concentration.
 
-      3. Subsequent tumor volume was monitored by small animal imaging.
+      4.	The protein is parameterized using the CHARMM36m force field, the water molecules use the TIP3P model, and ion parameters are derived from the CHARMM force field.
 
-      {{< image src="images/docs/protocol/p5.png" >}}
+      **B.	Molecular Dynamics Simulation Settings**
+
+      All molecular dynamics simulations are performed using the GROMACS 2022.5 software package.
+
+      1.	Energy minimization is conducted using the steepest descent algorithm to eliminate unfavorable atomic contacts and geometric clashes.
+
+      2.	In the first phase of equilibration (NVT), the system is equilibrated for 1 ns. Positional restraints with a force constant are applied to the protein backbone, allowing relaxation of the side chains and solvent molecules. In the second phase (NPT), the system is equilibrated with pressure controlled using the Berendsen pressure coupling method. During this phase, positional restraints on the solute are gradually reduced.
+
+      3.	The production simulation is conducted in the NPT ensemble. The temperature is maintained using the velocity-rescaling thermostat, and the pressure is controlled using the Parrinello-Rahman pressure coupling method. Short-range interactions, including van der Waals and electrostatic forces, are calculated with a cutoff distance, while long-range electrostatics are computed using the particle mesh Ewald (PME) method with a grid spacing.
+
+      **C.	Data Analysis**
+
+      1.	GROMACS tools are used to analyze trajectory data, including calculations of root mean square deviation (RMSD), root mean square fluctuation (RMSF), and interaction changes at the binding interface residues.
+
+      2.	Visual Molecular Dynamics (VMD) software is employed to visualize trajectories and extract snapshots for comparing the initial and final binding modes.
+
+      3.	Fluctuations in van der Waals and electrostatic interactions are calculated and presented in radar charts to visually compare the binding performance of different complexes. B-factor analysis is integrated to evaluate the structural stability and residue fluctuations of the complex.
+
+      4.	The initial and final binding interfaces are compared to analyze changes in key residue interactions.
+
+
 
 
 
@@ -349,41 +367,56 @@ protocols:
     content: |
       ### Principle
 
-      The TME significantly influences the biological characteristics of tumor cells. Subcutaneous implanted tumors are removed from their primary tissue microenvironment, resulting in development that deviates from clinical reality. Additionally, this model exhibits poor drug responsiveness, low metastatic rates, and survival curve data that do not correlate with clinical outcomes. To address these limitations, an in-situ transplantation model of tumor cell lines was constructed using primary cultured tumor cells. This model enables the assessment of drug efficacy and disease progression through various methods, including the observation of clinical symptoms in mice, survival times, tumor volume measurements, and the use of bioluminescent imaging to track luciferase-labeled tumor cells. This approach allows for real-time monitoring of tumor growth, distribution, and metastasis. Given the unique tumor growth microenvironment of liver cancer, coupled with the liver being the largest immunologically privileged organ in the human body, in situ tumor formation represents the optimal model for exploring adoptive immunotherapy for liver cancer.
+      The action of lactate dehydrogenase resulted in the reduction of NAD+ to form NADH. Subsequently, the combination of NADH and INT (2-p-iodophenyl-3-nitrophenyl tetrazolium chloride) was catalyzed by thioctylamine dehydrogenase (diaphorase) to form NAD+ and formazan. This process produced an absorption peak at 490 nm. Absorption peaks were generated at 490 nm, thus enabling the quantification of lactate dehydrogenase activity by colourimetry. Furthermore, the absorbance was found to be linearly and positively correlated with the activity of lactate dehydrogenase. Lactate dehydrogenase activity in cell lysates was assayed to evaluate the in vitro and ex vivo killing activity of NK cells. The schematic diagram of the principle is shown in Figure.
 
       {{< image src="images/docs/protocol/p6.png" >}}
 
-      Fig. The procedures of the in-situ pancreatic tumor-bearing mouse model construction
+      Figure1. Principle of LDH Assay
 
 
 
       ### Method
 
-      1. Cell Culture
+      The cytotoxicity function of CAR-NK cells was assessed by co-culture tumor cells at an E:T (effector to target) ratio of 1:1. For lactate dehydrogenase (LDH), CytoTox96 cytotoxicity assay was used according to the manufacturer's instructions (Promega, G1780).
 
-      Pancreatic cancer cells tumor cell  were cultured in DMEM medium supplemented with 10% fetal bovine serum, 100 mg/mL penicillin, and 100 mg/mL streptomycin and maintained in a 37 °C incubator with 5% CO₂.
+      Cytotoxicity (%) = [LDHE:T -LDHE]/LDHMax × 100%
 
-      2. Construction of the In Situ Pancreatic Cancer Tumor Model
+      **A.	Cell Preparation:**
 
-      (1) Cell preparation
+        1.	Seed K562 cells and previously proliferated NK cells into culture dishes with the appropriate medium. For the experimental group, use medium supplemented with 15 mM lactic acid to adjust the pH to 6.4; for the control group, use medium with pH 7.4. Incubate at 37°C with 5% CO₂ for 36 h. Change to a fresh medium the evening before the experiment.
 
-      Tumor cells were seeded in 10 cm culture dishes using DMEM medium (containing 10% fetal bovine serum and 1% penicillin-streptomycin) and incubated at 37 °C in a 5% CO₂ atmosphere until the cells reached the logarithmic growth phase.
+      **B.	Cytotoxicity Assay:**
 
-      (2) Harvesting cells with trypsin
+        1.	A 96-well round-bottom plate was prepared for the cytotoxicity assay. Experiments were conducted at E:T ratios of 1:1 , with replicates per ratio. Effector and target cells were added to each well, with a total volume of 100μL per well.
 
-      1 mL of 0.25% trypsin was added to each 10 cm dish for digestion for 1 min. Afterward, 2 mL of DMEM containing 10% fetal bovine serum was added to terminate the digestion. The cell suspension was transferred to a 15 mL centrifuge tube, and 5 mL of PBS was added to wash the dish. The solution was collected into the 15 mL tube, centrifuged at 1000 rpm/min for 5 min, and the supernatant was discarded. The tumor cell cells were then resuspended in PBS, centrifuged again at 1000 rpm/min for 5 min, and the wash was repeated twice.
+        2.	Control wells were set up: Natural release control wells with the same number of effector cells as in the experimental wells. Maximum release control wells with the same number of target cells, adding medium to achieve a final volume of 90 µL per well. Natural release control wells for target cells, adding medium to achieve a final volume of 100 µL per well. Background control wells with 100 µL of CAR-NK cells.
 
-      (3) Cell counting
+        Wells	|   Cell types	|   	Volume (per well)
+        ---- 	|   ---- 	|  ----
+        Experimental Wells	            |   	Effector and target cells	|   	100 μL
+        Natural release control wells	|   	Effector cells	            |   	100 μL
+        Maximum release control wells	|   	Target cells	            |   	90 µL
+        Natural release control wells	|   	Target cells	            |   	100 μL
+        Background control wells	    |   	NK cells	                |   	100 μL
 
-      The harvested tumor cell cells were resuspended in PBS, counted, and adjusted to a final concentration of 2×10⁷ cell/mL.
+        3.	10μL of sterile ultrapure water was added to the spontaneous Release Control wells for both effector and target cells. Spontaneous Release Control wells were built to reduce the interference of non-specific release from cells under normal culture conditions on the experimental results.
 
-      (4) Anesthesia of mice
+        4. The plate was incubated at 37°C with 5% CO₂ for 4 hours.
 
-      Each mouse received an intraperitoneal injection of the anesthetic pentobarbital (150-200 μL), and the injection site was disinfected with 75% ethanol prior to administration.
+        5. 10 μL of lysis buffer was added to the Maximum Release Control wells and incubated for 45 minutes.
 
-      (5) Injection of tumor cell
+        6. The plate was centrifuged at 250 g for 3 minutes. 50 μL of supernatant was transferred from each well to a corresponding flat-bottom plate. 50 μL of reaction substrate was added to each well and incubated in the dark at room temperature (25°C) for 30 minutes. Once color developed, 50 μL of stop solution was added to each well and the plate was mixed gently.
 
-      After anesthesia, the abdomen of the mouse was disinfected with povidone-iodine using a cotton swab. A longitudinal incision of approximately 1 cm was made in the left upper abdomen with ophthalmic surgical scissors. The spleen was gently elevated using a sterile cotton swab to visualize it, followed by careful exploration of the pancreas. Once the pancreas was located, the tip of the tail was grasped with curved ophthalmic forceps and gently pulled to expose the pancreas (care was taken to avoid rupturing the spleen). A 27-gauge needle was used with a 1 mL syringe to gently insert the needle into the pancreas from the tail end towards the head region, ensuring that it did not penetrate through the pancreas to prevent leakage of pancreatic fluid, which could lead to the death of the mouse. Each mouse received an injection of 50 μL containing 2×10⁷ cell/mL of tumor cell cells (successful injections were indicated by a visible small blister formation; if the pancreas was punctured, leakage of the cell suspension would be observed). After the injection, the direction of the needle was slightly adjusted, and the cell suspension was slowly injected while withdrawing the needle. Applying gentle pressure with a sterile cotton swab at the injection site for a moment effectively prevented leakage. The spleen and pancreas were then gently returned to the abdominal cavity, and the skin and peritoneum were sutured using 3-0 surgical sutures. Post-surgery, the mice were placed in a warm environment illuminated by incandescent light until they awakened naturally
+        7. A microplate reader was used to measure the absorbance at 490 nm and 680 nm. Subtract the absorbance value at 680 nm (background signal) from the absorbance at 490 nm (D).
+
+        8. For accurate calculations, the average Background Control value was subtracted from the average experimental value, the Effector Cell Spontaneous Release Control value, and the Target cell spontaneous release control value.
+
+        9. The NK cell killing rate (%) was calculated using the following formula:
+
+          NK killing Rate(%) = (Exp OD - Eff Spont OD - Tgt Spont OD - Bkgd Avg)/(Max Release OD - Tgt Spont OD)×100%
+
+          Lysis Rate(%) = (Exp LDH - Tgt Spont LDH)/(Max Release LDH)  ×100%
+
 
 
 
