@@ -122,7 +122,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .common-text-content-wrap {
   font-size: 1.5rem;
-  font-family: "ARIAL";
+  font-family: "Times New Roman";
+  text-align: justify;
+  p {
+    text-indent: 2em;
+  }
 }
 .project-page-wrap {
   .main-bg {
@@ -461,7 +465,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
       overflow-y: auto;
       font-size: 1.5rem;
       font-weight: 400;
-      font-family: "ARIAL";
+      font-family: "Times New Roman";
 
       ul {
         list-style: disc;
@@ -552,6 +556,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
       z-index: 1;
       justify-content: center;
       cursor: pointer;
+      font-size: 2rem;
     }
     .pro-item-content-wrap{
       background-image: url(../images/docs/protocol/content-bg.png);
@@ -568,7 +573,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     }
     .pro-item-content-text {
       height: 98%;
-      font-family: "ARIAL";
+      font-family: "Times New Roman";
       font-size: 1.25rem;
       overflow: hidden;
       overflow-y: auto;
