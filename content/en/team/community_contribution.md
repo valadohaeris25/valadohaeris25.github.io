@@ -8,7 +8,7 @@ layout: community
 
 
 blocks:
-  - title: "Demystifying CAR-T, A Bridge for Doctor-Patient Communication"
+  - title: "Bridging Knowledge with Compassion: Illustrating Immunotherapy for Cancer Patients"
     logo_title: "For Patients"
 #    title_image: "images/member/community/p11.png"
     content_image: "images/member/community/p1.png"
@@ -24,7 +24,7 @@ blocks:
       With the advancement of medical research, an increasing number of experiments rely on animal studies for pre-clinical research. Therefore, promoting innovation in experimental methods through new technologies is crucial to reducing the use of animals in research. We aim to share our application of synthetic biology in the context of animal experiments, as well as provide some educational insights on the topic.
 
 
-  - title: "To preach directed evolution and broaden researchers' ideas in the treatment of other diseases"
+  - title: "Harnessing Directed Evolution: Forging Next-Generation Therapies through CDC Collaboration"
     logo_title: "For Cancer Control"
 #    title_image: "images/member/community/p31.png"
     content_image: "images/member/community/p3.png"
