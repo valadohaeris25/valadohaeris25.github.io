@@ -10,9 +10,9 @@ layout: background
  
 {{< image src="images/project/result/r1.png" style="width: 60%;" >}}
  
-1. Innovative eCAR Technology: The novel chimeric receptor, eCAR, through charge-induced oligomerization enhances lymphocyte proliferation and activation, offering a promising approach for cancer immunotherapy.
-2. Enhanced NK Cell Effectiveness: By integrating an NKR library within the eCAR, the engineered NK cells exhibit ligand-dependent cytotoxicity, effectively targeting a wide range of tumor cells and tumor-derived organoids.
-3. Broad-Spectrum Cancer Immunotherapy: This study introduces a new strategy for NK cell-based therapy, utilizing an NKR library as a sensor to achieve targeted and efficient destruction of tumor cells across various malignancies.
+1. De novo rational design: By integrating RFdiffusion and AlphaFold3, we successfully generated IL-2 mimetics that selectively bind IL-2Rβ/γ while sparing IL-2Rα, thereby overcoming the intrinsic limitations of native IL-2 therapy associated with Treg expansion and systemic toxicity.
+2. Acid-responsive engineering: Incorporation of the pH-sensitive GALA peptide enabled selective IL-2Rβ/γ oligomerization under acidic tumor microenvironments, conferring conditional activation exclusively in low-pH settings.
+3. Enhanced effector cell potency: The engineered acid-responsive IL-2R agonists markedly promoted NK and CAR-NK cell proliferation, activation, and effector molecule secretion, achieving superior anti-tumor cytotoxicity compared with native IL-2.
 
 
 {{< image src="images/project/result/r2.png"  style="width: 40%;"  >}}
